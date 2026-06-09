@@ -520,6 +520,87 @@ main {
   font-weight: 700;
 }
 
+.press-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.press-outlet {
+  color: var(--muted);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+.press-entry {
+  display: grid;
+  grid-template-columns: minmax(7rem, 9.5rem) minmax(0, 1fr);
+  gap: 1rem;
+  margin-top: 0.35rem;
+}
+
+.press-media {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) - 16px);
+  aspect-ratio: 4 / 3;
+  background: rgba(255, 255, 255, 0.42);
+  transition: opacity 160ms ease;
+}
+
+.press-media:hover,
+.press-media:focus-visible {
+  opacity: 0.92;
+}
+
+.press-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.press-copy {
+  display: grid;
+  gap: 0.3rem;
+  align-content: start;
+}
+
+.press-copy h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.press-copy h3 a {
+  transition: color 160ms ease;
+}
+
+.press-copy h3 a:hover,
+.press-copy h3 a:focus-visible {
+  color: var(--accent);
+}
+
+.press-related {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.press-related a {
+  color: var(--text);
+}
+
+.entry-text a {
+  color: var(--text);
+  transition: color 160ms ease;
+}
+
+.entry-text a:hover,
+.entry-text a:focus-visible {
+  color: var(--accent);
+}
+
 .publication-group .subsection-title {
   margin: 0 0 0.9rem;
 }
@@ -957,5 +1038,13 @@ main {
 
   .reviewer-venues {
     grid-template-columns: 1fr;
+  }
+
+  .press-entry {
+    grid-template-columns: 1fr;
+  }
+
+  .press-media {
+    max-width: 16rem;
   }
 }
