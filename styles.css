@@ -678,6 +678,25 @@ main {
   color: #b33728;
 }
 
+.publication-link[data-kind="press"] .publication-link-icon {
+  background: rgba(196, 50, 50, 0.12);
+  color: #b83232;
+}
+
+.publication-link[data-kind="linkedin"] .publication-link-icon {
+  background: rgba(10, 102, 194, 0.12);
+  color: #0a66c2;
+}
+
+.publication-link[data-kind="web"] .publication-link-icon {
+  background: rgba(31, 92, 75, 0.12);
+  color: var(--accent);
+}
+
+.entry-body .publication-links {
+  margin-top: 0.65rem;
+}
+
 .publication-link-icon svg {
   width: 0.82rem;
   height: 0.82rem;
