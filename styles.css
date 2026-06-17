@@ -678,9 +678,21 @@ main {
   color: #b33728;
 }
 
+.publication-link[data-kind="github"] .publication-link-icon {
+  background: rgba(36, 41, 47, 0.1);
+  color: #24292f;
+}
+
 .publication-link[data-kind="press"] .publication-link-icon {
-  background: rgba(196, 50, 50, 0.12);
-  color: #b83232;
+  background: rgba(255, 255, 255, 0.72);
+  padding: 0 0.12rem;
+}
+
+.publication-link-logo {
+  display: block;
+  width: 0.82rem;
+  height: 0.82rem;
+  object-fit: contain;
 }
 
 .publication-link[data-kind="linkedin"] .publication-link-icon {
@@ -689,8 +701,8 @@ main {
 }
 
 .publication-link[data-kind="web"] .publication-link-icon {
-  background: rgba(31, 92, 75, 0.12);
-  color: var(--accent);
+  background: rgba(31, 92, 75, 0.1);
+  padding: 0 0.12rem;
 }
 
 .entry-body .publication-links {
