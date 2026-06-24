@@ -416,6 +416,10 @@ main {
   border-top: 1px solid var(--line);
 }
 
+.timeline-item-combined {
+  row-gap: 0.35rem;
+}
+
 .timeline-item:first-child,
 .list-item:first-child {
   padding-top: 0;
@@ -433,6 +437,10 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
+}
+
+.timeline-aside-secondary {
+  gap: 0;
 }
 
 .timeline-logos {
