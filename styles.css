@@ -608,6 +608,9 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 0.25rem;
+  padding: 0.4rem 0.35rem;
+  border-radius: 0.5rem;
+  background: var(--accent-soft);
   color: var(--muted);
   font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
   font-size: 0.72rem;
@@ -620,6 +623,7 @@ main {
 .press-category img {
   display: block;
   flex: 0 0 auto;
+  opacity: 0.92;
 }
 
 .press-grid .timeline-logos {
@@ -628,7 +632,8 @@ main {
 
 .timeline-aside .press-category {
   width: 5.25rem;
-  margin: -0.45rem 0 0;
+  margin: -0.35rem 0 0;
+  box-sizing: border-box;
 }
 
 .press-outlet {
