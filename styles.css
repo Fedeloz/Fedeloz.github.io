@@ -198,9 +198,13 @@ main {
   );
 }
 
-.hero-identity h1,
-.hero-identity .hero-subtitle {
+.hero-identity h1 {
   max-width: 52rem;
+  text-shadow: 0 1px 18px rgba(255, 252, 246, 0.75);
+}
+
+.hero-identity .hero-subtitle {
+  max-width: none;
   text-shadow: 0 1px 18px rgba(255, 252, 246, 0.75);
 }
 
@@ -274,6 +278,18 @@ main {
 .hero-aside-text {
   color: var(--muted);
   line-height: 1.55;
+}
+
+.social-link-icon-only {
+  gap: 0;
+  padding: 0.5rem;
+}
+
+.social-link-logo {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  object-fit: contain;
 }
 
 .social-link-email {
@@ -360,6 +376,11 @@ main {
   border-color: rgba(31, 92, 75, 0.22);
   background: rgba(31, 92, 75, 0.08);
   transform: translateY(-1px);
+}
+
+.section-heading-link-icon-only {
+  gap: 0;
+  padding: 0.45rem;
 }
 
 .section-heading-link img {
@@ -766,6 +787,11 @@ main {
   transform: translateY(-1px);
 }
 
+.publication-link-icon-only {
+  gap: 0;
+  padding: 0.28rem;
+}
+
 .publication-link-icon {
   display: inline-flex;
   align-items: center;
@@ -792,6 +818,11 @@ main {
 .publication-link[data-kind="github"] .publication-link-icon {
   background: rgba(36, 41, 47, 0.1);
   color: #24292f;
+}
+
+.publication-link[data-kind="scholar"] .publication-link-icon {
+  background: rgba(31, 92, 75, 0.08);
+  padding: 0.12rem;
 }
 
 .publication-link[data-kind="press"] .publication-link-icon {
@@ -1170,7 +1201,10 @@ main {
     padding: 2.75rem 1.25rem 0.5rem;
   }
 
-  .hero-identity h1,
+  .hero-identity h1 {
+    max-width: none;
+  }
+
   .hero-identity .hero-subtitle {
     max-width: none;
   }
