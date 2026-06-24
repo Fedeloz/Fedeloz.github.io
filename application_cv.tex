@@ -1,0 +1,140 @@
+\documentclass[10.5pt,letterpaper]{article}
+
+\usepackage[margin=0.85in]{geometry}
+\usepackage{fontspec}
+\usepackage{datetime2}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome5}
+\usepackage{academicons}
+\usepackage{xparse}
+
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{TeX Gyre Heros}
+\setmonofont{TeX Gyre Cursor}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.14em}
+\linespread{0.99}
+\urlstyle{tt}
+
+\titleformat{\section}{\large\rmfamily}{}{0pt}{}
+\titlespacing*{\section}{0pt}{0.85em}{0.25em}
+
+\newcommand{\cvname}[1]{{\fontsize{24}{26}\selectfont #1}}
+\newcommand{\cvtitle}[1]{{\fontsize{13}{15}\selectfont #1}}
+\newcommand{\contacticon}[1]{\raisebox{-0.14ex}{\fontsize{9}{9}\selectfont #1}\,}
+\newcommand{\contactline}[2]{#1\,#2\par\vspace{0.1em}}
+\newcommand{\subsubline}[1]{\vspace{0.12em}{\itshape #1}\par\vspace{0.05em}}
+
+\newlength{\datecolwidth}
+\setlength{\datecolwidth}{3.35cm}
+
+\NewDocumentCommand{\careerentry}{ m m m g }{%
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}>{\RaggedRight\arraybackslash}p{\datecolwidth}@{\hspace{0.65em}}>{\RaggedRight\arraybackslash}X@{}}
+    \textbf{#1} &
+    \begin{minipage}[t]{\linewidth}
+      \setlength{\parskip}{0.1em}
+      \textbf{#2}\par
+      {\itshape #3}\par
+      \IfNoValueF{#4}{#4\par}
+    \end{minipage}
+  \end{tabularx}\par\vspace{0.22em}
+}
+
+\newcommand{\datedentry}[2]{%
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}>{\RaggedRight\arraybackslash}p{\datecolwidth}@{\hspace{0.65em}}>{\RaggedRight\arraybackslash}X@{}}
+    \textbf{#1} & #2
+  \end{tabularx}\par\vspace{0.14em}
+}
+
+\begin{document}
+\thispagestyle{empty}
+
+{\cvname{Federico Lozano-Cuadra}}\\[0.2em]
+{\cvtitle{Ph.D. Researcher in AI for Space Communications (Fulbright)}}
+
+\vspace{0.45em}
+\hrule
+\vspace{0.75em}
+
+\begin{minipage}[t]{0.66\textwidth}
+  \contactline{\contacticon{\faIcon[regular]{envelope}}}{\href{mailto:fedeloz@uma.es}{fedeloz@uma.es}}
+  University of Malaga, Communications Engineering, Spain\\[0.12em]
+  NASA Jet Propulsion Laboratory, California, USA\\[0.12em]
+  Johns Hopkins University ACE Laboratory, Baltimore, USA
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.32\textwidth}
+  \raggedleft
+  \contactline{\contacticon{\faGlobe}}{\href{https://fedeloz.github.io/}{fedeloz.github.io}}
+  \contactline{\contacticon{\aiGoogleScholar}}{\href{https://scholar.google.com/citations?user=6PZm2aYAAAAJ}{Google Scholar}}
+  \contactline{\contacticon{\faLinkedinIn}}{\href{https://www.linkedin.com/in/federico-lozano-cuadra}{LinkedIn}}
+  \contactline{\contacticon{\faGithub}}{\href{https://github.com/fedeloz}{GitHub}}
+\end{minipage}
+\par\vspace{0.35em}
+
+\section{Profile}
+Fulbright Ph.D. researcher in Telecommunication Engineering at the University of Malaga, with research visits at NASA Jet Propulsion Laboratory and Johns Hopkins University ACE Lab, and collaborations with ESA. Research focus: AI for space communications, Multi-Agent LEO satellite networks, lunar rover autonomy, Foundation Models, Reinforcement Learning, Graph Neural Networks, and Federated Learning.
+
+\section{Education}
+\careerentry{Oct. 2023--present}{Ph.D. in Telecommunication Engineering (Fulbright, FPI)}{University of Malaga, Spain. NASA Jet Propulsion Lab, California, USA.}{Thesis: \emph{AI and Space Communications}. Advisors: Beatriz Soret (University of Malaga) and Federico Rossi (NASA JPL).}
+\careerentry{Sep. 2022--Sep. 2023}{M.Sc. in Telematics and Telecommunication Networks}{University of Malaga, Spain}{Thesis: \emph{Multi-Agent Reinforcement Learning for Routing in LEO Constellations}. Grade: 10/10 with Honors.}
+\careerentry{Sep. 2021--Jun. 2023}{M.Eng. in Telecommunication Engineering}{University of Malaga, Spain. DLR, Munich, Germany}{Thesis: \emph{Smartphone-based Map Matching for Urban Navigation}. Grade: 9/10.}
+
+\section{Research and Engineering Experience}
+\careerentry{Jan. 2025--present}{Visiting Researcher}{NASA Jet Propulsion Lab, California, USA}{Machine learning for autonomous lunar rover exploration in collaboration with CADRE mission, including graph attention-based multi-agent reinforcement learning routing policies and Foundation Models for communications and risk-aware autonomous exploration.}
+\careerentry{Mar. 2026--present}{Visiting Researcher}{Johns Hopkins University ACE Lab, Baltimore, USA}{Integration of Foundation Models for decentralized lunar exploration.}
+\careerentry{Oct. 2023--present}{Doctoral Researcher in Telecommunication Engineering (FPI)}{University of Malaga, Spain}{AI and space communications, including Low Earth Orbit satellite networks and lunar rover autonomy. Collaborations with ESA SatNEx, NASA Jet Propulsion Lab, and Johns Hopkins University.}
+\careerentry{Mar. 2023--Sep. 2023}{Research Fellow (Master Thesis)}{German Space Agency, DLR, Munich, Germany}{High-precision smartphone urban navigation using GNSS, Deep Learning, map-matching, particle filters, and sensor fusion in MATLAB and Python.}
+\careerentry{Jul. 2022--Feb. 2023}{Research Assistant}{University of Malaga, Spain}{Multi-agent deep reinforcement learning for routing in LEO satellite constellations, in collaboration with Aalborg University and ESA SatNEx V.}
+\careerentry{Jan. 2022--Jan. 2026}{Founder and CEO}{Blueberry Malaga, Spain}{Led a tech-education startup that reached more than 1{,}000 students through programs with universities, schools, Google, and OPPLUS.}
+
+\section{Publications}
+\subsubline{Journal Publications}
+\begin{enumerate}[label={[\arabic*]},leftmargin=2.1em,itemsep=0.16em,topsep=0.05em]
+  \item F. Lozano-Cuadra, B. Soret, I. Leyva-Mayorga, and P. Popovski. ``Continual deep reinforcement learning for decentralized satellite routing.'' \emph{IEEE Transactions on Communications}, 2025. doi: 10.1109/TCOMM.2025.3562522.
+  \item F. Lozano-Cuadra, I. Leyva-Mayorga, J. J. Nielsen, and B. Soret. ``Routing and Downlink Resource Allocation for Multicast Traffic in LEO Satellite Constellations.'' Accepted for publication in \emph{International Journal of Satellite Communications and Networking}, 2026.
+\end{enumerate}
+
+\subsubline{Selected Conference Publications}
+\begin{enumerate}[label={[\arabic*]},start=3,leftmargin=2.1em,itemsep=0.16em,topsep=0.05em]
+  \item F. Lozano-Cuadra, B. Soret, M. Sanchez Net, A. Cauligi, and F. Rossi. ``Learning decentralized routing policies via graph attention-based multi-agent reinforcement learning in lunar delay-tolerant networks.'' Accepted for presentation at the \emph{International Symposium on Planetary Robotics (iSpaRo)}, Sendai, Japan, 2025.
+  \item F. Lozano-Cuadra, M. Thorsager, I. Leyva-Mayorga, and B. Soret. ``An open source multi-agent deep reinforcement learning routing simulator for satellite networks.'' In \emph{Proceedings of SPAICE2024: The First Joint European Space Agency / IAA Conference on AI in and for Space}, Sep. 17--19, 2024, ESA ECSAT, Oxford, UK. doi: 10.5281/zenodo.13885645.
+  \item F. Lozano-Cuadra and B. Soret. ``Multi-Agent Deep Reinforcement Learning for Distributed Satellite Routing.'' In \emph{2024 IEEE International Conference on Machine Learning for Communication and Networking (ICMLCN)}, Stockholm, Sweden, 2024. doi: 10.1109/ICMLCN59089.2024.10624767.
+\end{enumerate}
+
+\subsubline{Under Review}
+\begin{enumerate}[label={[\arabic*]},start=6,leftmargin=2.1em,itemsep=0.16em,topsep=0.05em]
+  \item F. Lozano-Cuadra, B. Soret, M. Sanchez Net, A. Cauligi, and F. Rossi. ``Decentralized graph attention-based multi-agent reinforcement learning for communications in autonomous lunar rover swarms.'' Under review, 2026.
+\end{enumerate}
+
+\section{Selected Awards}
+\datedentry{2026}{Fulbright Predoctoral Fellowship for a 6-month Ph.D. research stay at NASA Jet Propulsion Lab and Johns Hopkins University; EUR 60{,}000 funding.}
+\datedentry{2026}{Acc\'esit, C\'atedra de Comercio y Transformaci\'on Digital (University of Malaga) award for the M.Sc. thesis.}
+\datedentry{2025}{\emph{100 Malague\~nos del A\~no 2025}, Diario SUR, for contributions to science and innovation.}
+\datedentry{2025}{IMFAHE Excellence Fellowship for an international research visit abroad; USD 5{,}100 fellowship value.}
+\datedentry{2024}{IEEE Student Travel Grant for the IEEE ICMLCN 2024 conference (Stockholm, Sweden).}
+\datedentry{2023}{FPI Scholarship, 4-year full contract to fund the Ph.D., including dedicated mobility budget.}
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=1.2em,itemsep=0.1em,topsep=0.05em]
+  \item \textbf{Machine Learning:} multi-agent deep reinforcement learning, federated learning, graph neural networks, graph attention networks, Foundation Models, convolutional neural networks, and large language models.
+  \item \textbf{Programming and tools:} Python, C, C++, MATLAB, Scala, PyTorch, TensorFlow, Keras, Pandas, NumPy, Git, Docker, CUDA Graphs, and TensorRT.
+  \item \textbf{Telecommunications:} satellite communications, GNSS, networks, signal processing, 5G, and 6G.
+  \item \textbf{Languages:} Spanish (native) and English (advanced, C1).
+\end{itemize}
+
+\vspace{0.5em}
+\begin{flushright}
+{\small Last updated: \DTMtoday}
+\end{flushright}
+
+\end{document}
