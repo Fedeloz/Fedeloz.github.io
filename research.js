@@ -30,3 +30,22 @@ async function refreshGitHubRepoStats() {
 
 refreshGitHubRepoStats();
 window.setInterval(refreshGitHubRepoStats, 60000);
+
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const autoplayVideos = document.querySelectorAll("[data-autoplay-video]");
+
+function updateAutoplayVideos() {
+  autoplayVideos.forEach((video) => {
+    if (reducedMotion.matches) {
+      video.pause();
+      return;
+    }
+
+    video.play().catch(() => {
+      // Native controls remain available if the browser blocks autoplay.
+    });
+  });
+}
+
+updateAutoplayVideos();
+reducedMotion.addEventListener("change", updateAutoplayVideos);

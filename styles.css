@@ -1044,10 +1044,20 @@ main {
   opacity: 0.92;
 }
 
-.research-media img {
+.research-media img,
+.research-media video {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.research-media video {
+  aspect-ratio: 64 / 37;
+  background: #171411;
+}
+
+.research-media-wide {
+  width: 100%;
 }
 
 .list-item {
