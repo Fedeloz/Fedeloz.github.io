@@ -814,6 +814,11 @@ main {
   color: #0f61b3;
 }
 
+.publication-link[data-kind="wiley"] .publication-link-icon {
+  background: rgba(0, 82, 100, 0.12);
+  color: #005264;
+}
+
 .publication-link[data-kind="arxiv"] .publication-link-icon {
   background: rgba(179, 55, 40, 0.12);
   color: #b33728;
