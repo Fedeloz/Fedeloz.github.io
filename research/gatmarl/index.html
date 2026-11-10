@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GAT-MARL · Communications for Lunar Rover Swarms</title>
+  <meta name="description" content="GAT-MARL: learning decentralized, mission-aware communications for autonomous lunar rover swarms. Mission video and abstract.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <div class="paper-heading">
+      <h1>Learning Decentralized, Mission-Aware Communications for Autonomous Lunar Rover Swarms</h1>
+      <p class="authors">Federico Lozano-Cuadra<sup>1</sup>, Beatriz Soret<sup>1</sup>, Marc Sanchez Net<sup>2</sup>, Abhishek Cauligi<sup>3</sup>, and Federico Rossi<sup>2</sup></p>
+      <div class="affiliations">
+        <p><sup>1</sup> Telecommunications Research Institute, University of Málaga, Spain</p>
+        <p><sup>2</sup> Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA USA</p>
+        <p><sup>3</sup> Department of Mechanical Engineering, Johns Hopkins University, Baltimore, MD USA</p>
+      </div>
+    </div>
+    <figure class="video">
+      <video controls playsinline preload="metadata" poster="assets/poster.jpg" aria-label="GAT-MARL lunar mission demonstration" width="1920" height="1080">
+        <source src="assets/lunar-mission.mp4" type="video/mp4">
+        <a href="https://drive.google.com/file/d/12wwawoxRfOYe75c9xHWfwlREEahE2m8K/view">Watch the mission video on Google Drive</a>.
+      </video>
+      <figcaption>A simulated lunar mission: exploration, data collection, and communication back to the lander.</figcaption>
+      <p class="credits">Video: Federico Lozano-Cuadra. Music: “Machina” by Scott Buckley, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. <a href="https://drive.google.com/file/d/12wwawoxRfOYe75c9xHWfwlREEahE2m8K/view">Watch on Google Drive ↗</a></p>
+    </figure>
+    <section class="abstract" aria-labelledby="abstract-title">
+      <h2 id="abstract-title">Abstract</h2>
+      <p>Future lunar exploration missions will rely on autonomous rover swarms operating beyond continuous lander coverage, under intermittent connectivity and severe communication, energy, and storage constraints. In such settings, rover networks naturally operate as lunar delay-tolerant networks (LDTNs), requiring decentralized and mission-aware communication strategies.</p>
+      <p>We propose a mission-aware framework that models exploration, sensing and data generation, and physical and communication constraints, using parameters and relevant scenarios from NASA’s Cooperative Autonomous Distributed Robotic Exploration (CADRE) mission. Exploration and communication are coupled, since the rovers’ trajectories determine when they can communicate. Within this framework, routing is performed by a fully decentralized and scalable policy based on graph attention-based multi-agent reinforcement learning (GAT-MARL). Two mission-aware mechanisms complement the routing: content-aware queue ordering, which prioritizes the data most relevant to the mission objectives, and a relay mode in which idle rovers support the swarm connectivity.</p>
+      <p>Monte Carlo packet-level simulations in representative lunar environments show that GAT-MARL consistently outperforms classical delay-tolerant network routing baselines. Notably, the integrated GAT-MARL with the mission-aware mechanisms enable a swarm of only 5 rovers to achieve a mean reported area comparable to that of a 15-rover swarm with the best classical routing approach (98.09% vs. 97.87%, respectively), demonstrating that intelligent, mission-aware decentralized communication can substantially reduce the required swarm size for a given mission objective. Furthermore the model is lightweight, with estimated microsecond-scale inference time on CADRE-class hardware.</p>
+    </section>
+  </main>
+</body>
+</html>
