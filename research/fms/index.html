@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vision Language Models · Multi-Robot Exploration</title>
+  <meta name="description" content="Open-world, communication-aware multi-robot exploration with vision language models. Mission video and abstract.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <div class="paper-heading">
+      <h1>Open-World, Communication-Aware Multi-Robot Exploration with Vision Language Models</h1>
+      <p class="authors"><a href="https://fedeloz.github.io/">Federico Lozano-Cuadra</a><sup>1</sup>, <a href="https://www.ic.uma.es/contenidos/ficha_personal.action?id=801">Beatriz Soret</a><sup>1</sup>, <a href="https://www.jpl.nasa.gov/site/research/mnet/">Marc Sanchez Net</a><sup>2</sup>, <a href="https://www-robotics.jpl.nasa.gov/who-we-are/people/federico_rossi/">Federico Rossi</a><sup>2</sup>, and <a href="https://engineering.jhu.edu/faculty/abhishek-cauligi/">Abhishek Cauligi</a><sup>3</sup></p>
+      <div class="affiliations">
+        <p><sup>1</sup> Telecommunications Research Institute, University of Málaga, Spain</p>
+        <p><sup>2</sup> Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA USA</p>
+        <p><sup>3</sup> Department of Mechanical Engineering, Johns Hopkins University, Baltimore, MD USA</p>
+      </div>
+      <div class="institution-logos" role="group" aria-label="Author institutions">
+        <img src="assets/uma.png" alt="University of Málaga" width="1200" height="1098">
+        <img src="assets/nasa_jpl.png" alt="NASA Jet Propulsion Laboratory, California Institute of Technology" width="1000" height="278">
+        <img src="assets/jhu.png" alt="Johns Hopkins University" width="3840" height="2160">
+      </div>
+    </div>
+    <figure class="video">
+      <video controls playsinline preload="metadata" poster="assets/poster.jpg" aria-label="Vision language models guiding a lunar rover mission" width="1920" height="1080">
+        <source src="assets/lunar-mission.mp4" type="video/mp4">
+        <a href="https://drive.google.com/file/d/1rTp7h4kpDTj8-XRBXwSITiiGBOWxWNZ3/view">Watch the mission video on Google Drive</a>.
+      </video>
+      <figcaption>A simulated lunar mission: vision language models jointly guide rover mobility and communication.</figcaption>
+      <p class="credits">Video: Federico Lozano-Cuadra. Music: “Machina” by Scott Buckley, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. <a href="https://drive.google.com/file/d/1rTp7h4kpDTj8-XRBXwSITiiGBOWxWNZ3/view">Watch on Google Drive ↗</a></p>
+    </figure>
+    <section class="abstract" aria-labelledby="abstract-title">
+      <h2 id="abstract-title">Abstract</h2>
+      <p>Multi-robot systems (MRS) will play an increasingly greater role in future robot operations, particularly in open-world environments typical of disaster recovery and planetary exploration. Planning for such MRS remains a formidable problem: coordination of multiple intelligent agents introduces novel challenges, in particular a large action space that increases combinatorially with the number of agents as well as unreliable inter-agent communication in open-world environments. Recently, vision language models (VLMs) have emerged as a promising paradigm for robot planning; VLMs allow users to flexibly express task specifications and semantic considerations through multi-modal interfaces, including natural language. Yet, the use of VLMs for planning and coordination of MRS remains an active area of research.</p>
+      <p>We propose an architecture in which general-purpose VLMs jointly guide mobility and communication decisions of autonomous robotic agents, consuming the robots’ sensor streams; deciding which information should be shared among the agents; and issuing commands to an autonomous mobility stack. We demonstrate that grounding VLM decisions in role-specific contexts with local observations and dynamic persistent memory leads to dramatically improved task performance and scaling.</p>
+      <p>We validate our framework through extensive simulations of a multi-agent mapping task, wherein a team of agents explores an unmapped region and task performance is measured by map reconstruction at a base station. Experiments show that the proposed architecture improves data packet delivery ratio and exploration coverage by up to 30.6% and 8.3%, respectively, compared to the strongest baseline, while demonstrating good scalability with increasing map size. We further provide design insights and recommendations through ablation studies and model comparisons within our proposed architecture.</p>
+    </section>
+  </main>
+</body>
+</html>
