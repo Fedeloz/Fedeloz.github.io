@@ -20,10 +20,15 @@
       </div>
     </div>
     <figure class="video">
+      <div class="video-player">
       <video controls playsinline preload="metadata" poster="assets/poster.jpg" aria-label="GAT-MARL lunar mission demonstration" width="1920" height="1080">
         <source src="assets/lunar-mission.mp4" type="video/mp4">
         <a href="https://drive.google.com/file/d/12wwawoxRfOYe75c9xHWfwlREEahE2m8K/view">Watch the mission video on Google Drive</a>.
       </video>
+      <button class="video-play" type="button" aria-label="Play video in fullscreen" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v18l16-9z"/></svg>
+      </button>
+      </div>
       <figcaption>A simulated lunar mission: exploration, data collection, and communication back to the lander.</figcaption>
       <p class="credits">Video: Federico Lozano-Cuadra. Music: “Machina” by Scott Buckley, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. <a href="https://drive.google.com/file/d/12wwawoxRfOYe75c9xHWfwlREEahE2m8K/view">Watch on Google Drive ↗</a></p>
     </figure>
@@ -34,5 +39,6 @@
       <p>Monte Carlo packet-level simulations in representative lunar environments show that GAT-MARL consistently outperforms classical delay-tolerant network routing baselines. Notably, the integrated GAT-MARL with the mission-aware mechanisms enable a swarm of only 5 rovers to achieve a mean reported area comparable to that of a 15-rover swarm with the best classical routing approach (98.09% vs. 97.87%, respectively), demonstrating that intelligent, mission-aware decentralized communication can substantially reduce the required swarm size for a given mission objective. Furthermore the model is lightweight, with estimated microsecond-scale inference time on CADRE-class hardware.</p>
     </section>
   </main>
+  <script src="video.js" defer></script>
 </body>
 </html>

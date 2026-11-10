@@ -20,10 +20,15 @@
       </div>
     </div>
     <figure class="video">
+      <div class="video-player">
       <video controls playsinline preload="metadata" poster="assets/poster.jpg" aria-label="Vision language models guiding a lunar rover mission" width="1920" height="1080">
         <source src="assets/lunar-mission.mp4" type="video/mp4">
         <a href="https://drive.google.com/file/d/1rTp7h4kpDTj8-XRBXwSITiiGBOWxWNZ3/view">Watch the mission video on Google Drive</a>.
       </video>
+      <button class="video-play" type="button" aria-label="Play video in fullscreen" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v18l16-9z"/></svg>
+      </button>
+      </div>
       <figcaption>A simulated lunar mission: vision language models jointly guide rover mobility and communication.</figcaption>
       <p class="credits">Video: Federico Lozano-Cuadra. Music: “Machina” by Scott Buckley, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. <a href="https://drive.google.com/file/d/1rTp7h4kpDTj8-XRBXwSITiiGBOWxWNZ3/view">Watch on Google Drive ↗</a></p>
     </figure>
@@ -34,5 +39,6 @@
       <p>We validate our framework through extensive simulations of a multi-agent mapping task, wherein a team of agents explores an unmapped region and task performance is measured by map reconstruction at a base station. Experiments show that the proposed architecture improves data packet delivery ratio and exploration coverage by up to 30.6% and 8.3%, respectively, compared to the strongest baseline, while demonstrating good scalability with increasing map size. We further provide design insights and recommendations through ablation studies and model comparisons within our proposed architecture.</p>
     </section>
   </main>
+  <script src="video.js" defer></script>
 </body>
 </html>

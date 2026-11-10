@@ -131,3 +131,33 @@ figcaption { font-size: 13px; color: #bdc4c1; margin-top: 17px; line-height: 1.6
 
 .authors a { color: inherit; text-decoration-color: #667f82; text-decoration-thickness: 1px; white-space: nowrap; }
 .authors a:hover { color: var(--accent); }
+
+.video-player { position: relative; }
+.video-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  border: 1px solid #dceced99;
+  border-radius: 50%;
+  background: #111517df;
+  color: #fff;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.video-play[hidden] { display: none; }
+.video-play:hover { background: #294348; }
+.video-play:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+.video-play svg { width: 26px; height: 26px; margin-left: 4px; fill: currentColor; }
+video:fullscreen { width: 100%; height: 100%; max-width: none; max-height: none; aspect-ratio: auto; object-fit: contain; border: 0; border-radius: 0; background: #000; }
+video:-webkit-full-screen { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: contain; border: 0; border-radius: 0; background: #000; }
+@media (max-width: 650px) {
+  .video-player { margin-inline: -16px; width: calc(100% + 32px); }
+  .video-player video { border-radius: 0; border-inline: 0; }
+  .video-play { width: 56px; height: 56px; }
+}
