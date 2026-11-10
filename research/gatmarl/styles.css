@@ -107,23 +107,27 @@ figcaption { font-size: 13px; color: #bdc4c1; margin-top: 17px; line-height: 1.6
 
 .authors sup, .affiliations sup { font-size: .7em; color: var(--accent); }
 .affiliations { margin: 16px auto 0; max-width: 900px; color: var(--muted); font-size: 12px; line-height: 1.8; }
-.affiliations p { margin: 3px 0; }
+ .affiliations p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 7px 0;
+}
+.affiliations span { min-width: 0; }
+.affiliations img {
+  flex: 0 0 auto;
+  display: block;
+  width: auto;
+  height: 28px;
+  padding: 3px;
+  background: #f5f6f5;
+  border-radius: 2px;
+}
+@media (max-width: 650px) {
+  .affiliations p { gap: 8px; }
+  .affiliations img { height: 24px; }
+}
 
 .authors a { color: inherit; text-decoration-color: #667f82; text-decoration-thickness: 1px; white-space: nowrap; }
 .authors a:hover { color: var(--accent); }
-.institution-logos {
-  display: grid;
-  grid-template-columns: .75fr 2.7fr 1.35fr;
-  align-items: center;
-  gap: 28px;
-  width: min(600px, 100%);
-  margin: 26px auto 0;
-  padding: 14px 24px;
-  background: #f5f6f5;
-  border-radius: 4px;
-}
-.institution-logos img { display: block; width: 100%; height: 68px; object-fit: contain; }
-@media (max-width: 650px) {
-  .institution-logos { gap: 16px; padding: 12px 16px; }
-  .institution-logos img { height: 52px; }
-}
