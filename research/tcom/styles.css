@@ -143,10 +143,91 @@ video:-webkit-full-screen { width: 100%; height: 100%; max-width: none; max-heig
 }
 
 .publication { margin: 18px 0 20px; font-size: 12px; color: var(--muted); }
-.paper-links { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
-.paper-links a { display: inline-flex; align-items: center; gap: 5px; padding: 7px 14px; border: 1px solid var(--line); border-radius: 5px; font-size: 13px; text-decoration: none; background: #192023; }
-.paper-links a:hover { background: #253337; border-color: var(--accent); }
-.related-paper { max-width: 810px; margin: 40px auto 0; border-top: 1px solid var(--line); padding-top: 25px; }
-.related-paper h2 { font: 500 11px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); }
-.related-paper p { margin-bottom: 10px; }
-.related-paper .paper-links { justify-content: flex-start; margin-top: 18px; }
+.research-repo-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.95rem 1.05rem;
+  border: 1px solid rgba(255, 247, 235, 0.08);
+  border-radius: calc(var(--radius) - 14px);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.04), transparent 42%),
+    #2a241c;
+  color: #f6f0e6;
+  box-shadow: 0 14px 36px rgba(23, 20, 17, 0.18);
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease;
+}
+
+.research-repo-card:hover,
+.research-repo-card:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(255, 247, 235, 0.16);
+  box-shadow: 0 18px 42px rgba(23, 20, 17, 0.24);
+}
+
+.research-repo-card-logo {
+  width: 1.45rem;
+  height: 1.45rem;
+  flex-shrink: 0;
+  margin-top: 0.08rem;
+  display: block;
+}
+
+.research-repo-card-body {
+  display: grid;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.research-repo-card-name {
+  color: inherit;
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.research-repo-card .repo-stats {
+  color: rgba(246, 240, 230, 0.68);
+}
+
+.repo-stats {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 0.82rem;
+}
+
+.repo-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.repo-stat-icon {
+  width: 0.95rem;
+  height: 0.95rem;
+  flex-shrink: 0;
+  display: block;
+}
+
+.repo-stat-sep {
+  opacity: 0.55;
+}
+
+
+.research-repo-card { --radius: 28px; max-width: 640px; margin: 0 auto; text-align: left; text-decoration: none; line-height: 1.6; }
+.research-repo-card:hover { color: #f6f0e6; }
+.papers { max-width: 810px; margin: 40px auto 0; border-top: 1px solid var(--line); padding-top: 25px; }
+.papers h2 { font: 500 11px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); margin: 0 0 25px; }
+.paper-list { list-style: none; padding: 0; margin: 0; }
+.paper-list li + li { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line); }
+.paper-list h3 { font-size: 17px; line-height: 1.5; font-weight: 400; margin: 0 0 6px; }
+.paper-venue { font-size: 12px; color: var(--muted); margin: 0 0 6px; }
+.paper-links { display: flex; flex-wrap: wrap; gap: 18px; font-size: 13px; }

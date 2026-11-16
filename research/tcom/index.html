@@ -18,17 +18,59 @@
         <p><sup>2</sup> Connectivity Section, Aalborg University, Denmark</p>
       </div>
       <p class="publication">IEEE Transactions on Communications · 2025</p>
-      <nav class="paper-links" aria-label="Paper and source code">
-        <a href="https://doi.org/10.1109/TCOMM.2025.3562522">IEEE paper ↗</a>
-        <a href="https://arxiv.org/abs/2405.12308">arXiv ↗</a>
-        <a href="https://github.com/SatCom-TELMA/MA-DRL_Routing_Simulator">GitHub ↗</a>
-        <a href="https://github.com/SatCom-TELMA/MA-DRL_Routing_Simulator/stargazers">☆ <span id="stars">Stars</span></a>
-        <a href="https://github.com/SatCom-TELMA/MA-DRL_Routing_Simulator/forks"><span id="forks">Forks</span></a>
-      </nav>
+      <a
+                  class="research-repo-card"
+                  href="https://github.com/SatCom-TELMA/MA-DRL_Routing_Simulator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    class="research-repo-card-logo"
+                    src="assets/github-mark.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                    decoding="async"
+                  />
+                  <span class="research-repo-card-body">
+                    <span class="research-repo-card-name"
+                      >SatCom-TELMA/MA-DRL_Routing_Simulator</span
+                    >
+                    <span
+                      class="repo-stats"
+                      data-github-repo="SatCom-TELMA/MA-DRL_Routing_Simulator"
+                      aria-live="polite"
+                    >
+                      <span class="repo-stat">
+                        <img
+                          class="repo-stat-icon"
+                          src="assets/github-star.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          decoding="async"
+                        />
+                        <span data-stars aria-label="GitHub stars">—</span>
+                      </span>
+                      <span class="repo-stat-sep" aria-hidden="true">·</span>
+                      <span class="repo-stat">
+                        <img
+                          class="repo-stat-icon"
+                          src="assets/github-fork.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          decoding="async"
+                        />
+                        <span data-forks aria-label="GitHub forks">—</span>
+                      </span>
+                    </span>
+                  </span>
+                </a>
     </div>
     <figure class="video">
       <div class="video-player">
-      <video controls playsinline loop muted preload="metadata" poster="assets/poster.jpg" aria-label="Satellite routing animation between Málaga and Los Angeles" width="640" height="360">
+      <video autoplay controls playsinline loop muted preload="metadata" poster="assets/poster.jpg" aria-label="Satellite routing animation between Málaga and Los Angeles" width="640" height="360">
         <source src="assets/routing-demo.mp4" type="video/mp4">
         <a href="https://drive.google.com/file/d/1214G8oXsMLaqqRrAIqweVkSTFjZ3FOHx/view">Watch the full demonstration on Google Drive</a>.
       </video>
@@ -42,11 +84,14 @@
     <section class="abstract" aria-labelledby="abstract-title"><h2 id="abstract-title">Abstract</h2><p>This paper introduces a full solution for decentralized routing in Low Earth Orbit Satellite Constellations (LSatCs) based on continual Deep Reinforcement Learning (DRL). This requires addressing multiple challenges, including the partial knowledge at the satellites and their continuous movement, and the time-varying sources of uncertainty in the system, such as traffic, communication links, or communication buffers. We follow a multi-agent approach, where each satellite acts as an independent decision-making agent, while acquiring a limited knowledge of the environment based on the feedback received from the nearby agents.</p>
       <p>The solution is divided into two phases. First, an offline learning phase relies on decentralized decisions and a global Deep Neural Network (DNN) trained with global experiences to learn the optimal paths at each possible position and congestion level. Then, the online phase with local, on-board, and pre-trained DNNs requires continual learning to evolve with the environment, which can be done in two different ways: (1) Model anticipation, where the predictable conditions of the constellation, resulting from its orbital dynamics, are exploited by each satellite sharing local model with the next satellite; and (2) Federated Learning (FL), where each agent’s model is merged first at the cluster level and then aggregated in a global Parameter Server (PS) at ground or at a geostationary orbit (GEO) satellite.</p>
       <p>The results show that, without high congestion, the proposed Multi-Agent Deep Reinforcement Learning (MA-DRL) framework achieves the same E2E performance as a shortest-path solution, but the latter assumes intensive communication overhead for real-time network-wise knowledge of the system at a centralized node, whereas ours only requires limited feedback exchange among first neighbour satellites. Importantly, our solution adapts well to congestion conditions and exploits less loaded paths. Moreover, the divergence of models over time is easily tackled by the synergy between anticipation, applied in short-term alignment, and FL, utilized for long-term alignment.</p></section>
-    <section class="related-paper" aria-labelledby="simulator-title">
-      <h2 id="simulator-title">Simulator paper</h2>
-      <p>An open source Multi-Agent Deep Reinforcement Learning Routing Simulator for satellite networks</p>
-      <p class="credits">Federico Lozano-Cuadra, Mathias D. Thorsager, Israel Leyva-Mayorga, and Beatriz Soret · SPAICE 2024</p>
-      <div class="paper-links"><a href="https://doi.org/10.5281/zenodo.13885645">Paper ↗</a><a href="https://arxiv.org/abs/2407.11047">arXiv ↗</a></div>
+    <section class="papers" aria-labelledby="papers-title">
+      <h2 id="papers-title">Papers</h2>
+      <ul class="paper-list">
+        <li><h3>Continual Deep Reinforcement Learning for Decentralized Satellite Routing</h3><p class="paper-venue">IEEE Transactions on Communications · 2025</p><div class="paper-links"><a href="https://doi.org/10.1109/TCOMM.2025.3562522">IEEE ↗</a><a href="https://arxiv.org/abs/2405.12308">arXiv ↗</a></div></li>
+        <li><h3>Multi-Agent Deep Reinforcement Learning for Distributed Satellite Routing</h3><p class="paper-venue">ICMLCN · 2024</p><div class="paper-links"><a href="https://doi.org/10.1109/ICMLCN59089.2024.10624767">IEEE ↗</a><a href="https://arxiv.org/abs/2402.17666">arXiv ↗</a></div></li>
+        <li><h3>Q-learning for distributed routing in LEO satellite constellations</h3><p class="paper-venue">ICMLCN · 2024</p><div class="paper-links"><a href="https://doi.org/10.1109/ICMLCN59089.2024.10624807">IEEE ↗</a><a href="https://arxiv.org/abs/2306.01346">arXiv ↗</a></div></li>
+        <li><h3>An open source Multi-Agent Deep Reinforcement Learning Routing Simulator for satellite networks</h3><p class="paper-venue">SPAICE · 2024</p><div class="paper-links"><a href="https://doi.org/10.5281/zenodo.13885645">Paper ↗</a><a href="https://arxiv.org/abs/2407.11047">arXiv ↗</a></div></li>
+      </ul>
     </section>
   </main>
   <script src="video.js" defer></script>

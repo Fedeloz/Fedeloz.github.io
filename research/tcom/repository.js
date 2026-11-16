@@ -1,7 +1,32 @@
-fetch("https://api.github.com/repos/SatCom-TELMA/MA-DRL_Routing_Simulator")
-  .then(response => { if (!response.ok) throw new Error("Repository unavailable"); return response.json(); })
-  .then(repo => {
-    if (Number.isInteger(repo.stargazers_count)) document.querySelector("#stars").textContent = `${repo.stargazers_count.toLocaleString()} stars`;
-    if (Number.isInteger(repo.forks_count)) document.querySelector("#forks").textContent = `${repo.forks_count.toLocaleString()} forks`;
-  })
-  .catch(() => { /* Keep working repository links when counts are unavailable. */ });
+async function refreshGitHubRepoStats() {
+  const statsBlocks = document.querySelectorAll("[data-github-repo]");
+
+  await Promise.all(
+    [...statsBlocks].map(async (block) => {
+      const repo = block.dataset.githubRepo;
+      const starsEl = block.querySelector("[data-stars]");
+      const forksEl = block.querySelector("[data-forks]");
+
+      if (!repo || !starsEl || !forksEl) {
+        return;
+      }
+
+      try {
+        const response = await fetch(`https://api.github.com/repos/${repo}`);
+        if (!response.ok) {
+          throw new Error(`GitHub API returned ${response.status}`);
+        }
+
+        const data = await response.json();
+        starsEl.textContent = data.stargazers_count.toLocaleString();
+        forksEl.textContent = data.forks_count.toLocaleString();
+      } catch {
+        starsEl.textContent = "—";
+        forksEl.textContent = "—";
+      }
+    }),
+  );
+}
+
+refreshGitHubRepoStats();
+window.setInterval(refreshGitHubRepoStats, 60000);
