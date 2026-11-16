@@ -18,11 +18,13 @@ async function refreshGitHubRepoStats() {
         }
 
         const data = await response.json();
-        starsEl.textContent = data.stargazers_count.toLocaleString();
-        forksEl.textContent = data.forks_count.toLocaleString();
+        if (Number.isInteger(data.stargazers_count) && data.stargazers_count >= 0 &&
+            Number.isInteger(data.forks_count) && data.forks_count >= 0) {
+          starsEl.textContent = data.stargazers_count.toLocaleString();
+          forksEl.textContent = data.forks_count.toLocaleString();
+        }
       } catch {
-        starsEl.textContent = "—";
-        forksEl.textContent = "—";
+        // Preserve the last known counts if GitHub is blocked or rate-limited.
       }
     }),
   );
