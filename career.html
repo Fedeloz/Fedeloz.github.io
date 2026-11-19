@@ -7,327 +7,142 @@
     <title>Career | Federico Lozano-Cuadra</title>
     <meta name="description" content="Education and work experience of Federico Lozano-Cuadra." />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="navigation.js" defer></script>
+    <script src="constellations.js" defer></script>
   </head>
   <body>
-    <div class="ambient ambient-left" aria-hidden="true"></div>
-    <div class="ambient ambient-right" aria-hidden="true"></div>
 
     <div class="page-shell">
       <header class="site-header">
-        <nav class="site-nav" aria-label="Primary navigation">
-          <a href="index.html">Home</a>
-          <a href="index.html#research">Research</a>
-          <a href="index.html#publications">Publications</a>
+        <a class="wordmark" href="./" aria-label="Federico Lozano-Cuadra, home">Federico Lozano-Cuadra</a>
+        <button class="menu-switch" type="button" aria-controls="primary-links" aria-expanded="false" hidden>Menu <span aria-hidden="true">☰</span></button>
+        <nav class="site-nav" id="primary-links" aria-label="Primary navigation">
+          <a href="./">Home</a>
+          <a href="research/">Research</a>
           <a href="career.html" aria-current="page">Career</a>
-          <a href="awards.html">Awards</a>
-          <a href="press.html">Press</a>
-          <a href="activities.html">Activities</a>
           <a href="entrepreneurship.html">Entrepreneurship</a>
+          <a href="awards.html">Awards</a>
+          <a href="press.html">Events &amp; media</a>
+          <a href="book.html" class="nav-book">Book me</a>
         </nav>
       </header>
 
-      <main>
-        <section class="panel" id="studies">
-          <div class="section-heading">
-            <p class="section-label">Studies</p>
-            <h2>Education</h2>
-          </div>
-          <div class="timeline">
-            <article class="timeline-item">
-              <div class="timeline-aside">
-                <p class="timeline-period">Oct. 2023–present</p>
-                <div class="timeline-logos">
-                  <a class="timeline-logo-link" href="https://www.jpl.nasa.gov/" target="_blank" rel="noopener noreferrer" aria-label="NASA Jet Propulsion Laboratory">
-                    <img class="timeline-logo" src="resources/logos/inst-nasa.png" alt="" width="32" height="32" decoding="async" />
-                  </a>
-                  <a class="timeline-logo-link" href="https://acelab.me.jhu.edu/" target="_blank" rel="noopener noreferrer" aria-label="Johns Hopkins University ACE Lab">
-                    <img class="timeline-logo" src="resources/logos/inst-jhu.png" alt="" width="32" height="32" decoding="async" />
-                  </a>
-                  <a class="timeline-logo-link" href="https://www.uma.es" target="_blank" rel="noopener noreferrer" aria-label="University of Malaga">
-                    <img class="timeline-logo" src="resources/logos/inst-uma.png" alt="" width="32" height="32" decoding="async" />
-                  </a>
-                </div>
-              </div>
-              <div class="entry-body">
-                <h3 class="entry-role">Ph.D. in Telecommunication Engineering</h3>
-                <p class="entry-org">
-                  University of Malaga · NASA Jet Propulsion Laboratory · Johns
-                  Hopkins University
-                </p>
-                <p class="entry-location">Malaga, Spain · California, USA · Baltimore, USA</p>
-                <p class="entry-text">
-                  Thesis: <em>Machine Learning and Space Communications</em>.
-                  Research affiliations include NASA Jet Propulsion Laboratory
-                  (Jan. 2025–present) and Johns Hopkins University ACE Lab,
-                  focused on multi-agent AI for lunar rover communications.
-                </p>
-              </div>
+      <main class="career-page">
+        <h1 class="career-page-title">Career</h1>
+        <section class="career-section" id="studies" aria-labelledby="studies-title">
+          <h2 id="studies-title">Education</h2>
+          <div class="career-list">
+            <article class="career-entry">
+              <header class="career-entry-heading">
+                <h3>Ph.D. in Telecommunication Engineering</h3>
+                <p class="career-period">Oct. 2023–Oct. 2026</p>
+              </header>
+              <p class="career-affiliation"><a href="https://www.uma.es" target="_blank" rel="noopener noreferrer"><img class="career-logo" src="resources/logos/inst-uma.png" alt="" width="128" height="128" decoding="async">&nbsp;University of Malaga</a> · <a href="https://www.jpl.nasa.gov/" target="_blank" rel="noopener noreferrer"><img class="career-logo" src="resources/logos/inst-nasa.png" alt="" width="128" height="128" decoding="async">&nbsp;NASA Jet Propulsion Laboratory</a> · <a href="https://acelab.me.jhu.edu/" target="_blank" rel="noopener noreferrer"><img class="career-logo" src="resources/logos/inst-jhu.png" alt="" width="128" height="128" decoding="async">&nbsp;Johns Hopkins University</a> <span class="career-place">· Malaga, Spain · California, USA · Baltimore, USA</span></p>
+              <p class="career-detail">Thesis: <strong>Multi-Agent Intelligence for Space Communication Networks</strong>. During research visits to NASA Jet Propulsion Laboratory (Jan. 2025–Oct. 2026) and the Johns Hopkins University ACE Lab (Mar. 2026–Oct. 2026), I worked on multi-agent AI for lunar rover communications.</p>
             </article>
-
-            <article class="timeline-item">
-              <div class="timeline-aside">
-                <p class="timeline-period">Sep. 2022–Sep. 2023</p>
-                <div class="timeline-logos">
-                  <a class="timeline-logo-link" href="https://www.uma.es" target="_blank" rel="noopener noreferrer" aria-label="University of Malaga">
-                    <img class="timeline-logo" src="resources/logos/inst-uma.png" alt="" width="32" height="32" decoding="async" />
-                  </a>
-                </div>
-              </div>
-              <div class="entry-body">
-                <h3 class="entry-role">
-                  M.Sc. in Telematics and Telecommunication Networks
-                </h3>
-                <p class="entry-org">University of Malaga</p>
-                <p class="entry-location">Malaga, Spain</p>
-                <p class="entry-text">
-                  Thesis: <em>Multi-Agent Reinforcement Learning for Routing in
-                  LEO Constellations</em>.
-                  <span class="entry-grade">· Grade: 10/10 with Honors</span>
-                </p>
-              </div>
+            <article class="career-entry">
+              <header class="career-entry-heading">
+                <h3>M.Sc. in Telematics and Telecommunication Networks</h3>
+                <p class="career-period">Sep. 2022–Sep. 2023</p>
+              </header>
+              <p class="career-affiliation"><a href="https://www.uma.es" target="_blank" rel="noopener noreferrer"><img class="career-logo" src="resources/logos/inst-uma.png" alt="" width="128" height="128" decoding="async">&nbsp;University of Malaga</a> <span class="career-place">· Malaga, Spain</span></p>
+              <p class="career-detail">Thesis: <em>Multi-Agent Reinforcement Learning for Routing in LEO Constellations</em>. <span class="entry-grade">· Grade: 10/10 with Honors</span></p>
             </article>
-
-            <article class="timeline-item">
-              <div class="timeline-aside">
-                <p class="timeline-period">Sep. 2021–Jun. 2023</p>
-                <div class="timeline-logos">
-                  <a class="timeline-logo-link" href="https://www.dlr.de/en" target="_blank" rel="noopener noreferrer" aria-label="German Space Agency, DLR">
-                    <img class="timeline-logo" src="resources/logos/inst-dlr.png" alt="" width="32" height="32" decoding="async" />
-                  </a>
-                  <a class="timeline-logo-link" href="https://www.uma.es" target="_blank" rel="noopener noreferrer" aria-label="University of Malaga">
-                    <img class="timeline-logo" src="resources/logos/inst-uma.png" alt="" width="32" height="32" decoding="async" />
-                  </a>
-                </div>
-              </div>
-              <div class="entry-body">
-                <h3 class="entry-role">
-                  M.Eng. in Telecommunication Engineering
-                </h3>
-                <p class="entry-org">University of Malaga</p>
-                <p class="entry-location">Malaga, Spain</p>
-                <p class="entry-text">
-                  Thesis: <em>Smartphone-based Map Matching for Urban
-                  Navigation</em>
-                  <span class="entry-grade">· Grade: 9/10</span>,
-                  completed at the German Space Agency, DLR.
-                </p>
-              </div>
+            <article class="career-entry">
+              <header class="career-entry-heading">
+                <h3>M.Eng. in Telecommunication Engineering</h3>
+                <p class="career-period">Sep. 2021–Jun. 2023</p>
+              </header>
+              <p class="career-affiliation"><a href="https://www.uma.es" target="_blank" rel="noopener noreferrer"><img class="career-logo" src="resources/logos/inst-uma.png" alt="" width="128" height="128" decoding="async">&nbsp;University of Málaga</a> · <a href="https://www.dlr.de/en" target="_blank" rel="noopener noreferrer"><img class="career-logo" src="resources/logos/inst-dlr.png" alt="" width="128" height="128" decoding="async">&nbsp;German Aerospace Center (DLR)</a> <span class="career-place">· Málaga, Spain · Munich, Germany</span></p>
+              <p class="career-detail">Thesis: <em>Smartphone-based Map Matching for Urban Navigation</em>, completed at <a href="https://www.dlr.de/en" target="_blank" rel="noopener noreferrer">DLR</a>. <span class="entry-grade">· Grade: 9/10</span></p>
             </article>
-
-            <article class="timeline-item">
-              <div class="timeline-aside">
-                <p class="timeline-period">Feb. 2021–Jul. 2021</p>
-                <div class="timeline-logos">
-                  <a class="timeline-logo-link" href="https://www.seoultech.ac.kr" target="_blank" rel="noopener noreferrer" aria-label="Seoul National University of Science and Technology">
-                    <img class="timeline-logo" src="resources/logos/inst-seoultech.png" alt="" width="32" height="32" decoding="async" />
-                  </a>
-                </div>
-              </div>
-              <div class="entry-body">
-                <h3 class="entry-role">Mobility program</h3>
-                <p class="entry-org">Seoul National University of Science and Technology</p>
-                <p class="entry-location">Seoul, South Korea</p>
-                <p class="entry-text">
-                  Semester abroad completed through the university mobility
-                  program.
-                </p>
-              </div>
+            <article class="career-entry">
+              <header class="career-entry-heading">
+                <h3>Mobility program</h3>
+                <p class="career-period">Feb. 2021–Jul. 2021</p>
+              </header>
+              <p class="career-affiliation"><a href="https://www.seoultech.ac.kr" target="_blank" rel="noopener noreferrer"><img class="career-logo" src="resources/logos/inst-seoultech.png" alt="" width="114" height="114" decoding="async">&nbsp;Seoul National University of Science and Technology</a> <span class="career-place">· Seoul, South Korea</span></p>
+              <p class="career-detail">I spent an exchange semester at SeoulTech, a pioneer in engineering education in South Korea.</p>
             </article>
-
-            <article class="timeline-item">
-              <div class="timeline-aside">
-                <p class="timeline-period">Sep. 2018–Jun. 2019</p>
-                <div class="timeline-logos">
-                  <a class="timeline-logo-link" href="https://upb.ro/en/" target="_blank" rel="noopener noreferrer" aria-label="Politehnica University of Bucharest">
-                    <img class="timeline-logo" src="resources/logos/inst-upb.png" alt="" width="32" height="32" decoding="async" />
-                  </a>
-                </div>
-              </div>
-              <div class="entry-body">
-                <h3 class="entry-role">Erasmus program</h3>
-                <p class="entry-org">Politehnica University of Bucharest</p>
-                <p class="entry-location">Bucharest, Romania</p>
-                <p class="entry-text">
-                  Academic year abroad completed through the Erasmus program.
-                </p>
-              </div>
+            <article class="career-entry">
+              <header class="career-entry-heading">
+                <h3>Erasmus program</h3>
+                <p class="career-period">Sep. 2018–Jun. 2019</p>
+              </header>
+              <p class="career-affiliation"><a href="https://upb.ro/en/" target="_blank" rel="noopener noreferrer"><img class="career-logo" src="resources/logos/inst-upb.png" alt="" width="270" height="270" decoding="async">&nbsp;Politehnica University of Bucharest</a> <span class="career-place">· Bucharest, Romania</span></p>
+              <p class="career-detail">I spent an Erasmus year at Politehnica Bucharest, Romania’s oldest engineering school.</p>
             </article>
-
-            <article class="timeline-item">
-              <div class="timeline-aside">
-                <p class="timeline-period">Sep. 2016–Jun. 2020</p>
-                <div class="timeline-logos">
-                  <a class="timeline-logo-link" href="https://www.uma.es" target="_blank" rel="noopener noreferrer" aria-label="University of Malaga">
-                    <img class="timeline-logo" src="resources/logos/inst-uma.png" alt="" width="32" height="32" decoding="async" />
-                  </a>
-                </div>
-              </div>
-              <div class="entry-body">
-                <h3 class="entry-role">B.Eng. in Telecommunication Systems Engineering</h3>
-                <p class="entry-org">University of Malaga</p>
-                <p class="entry-location">Malaga, Spain</p>
-                <p class="entry-text">
-                  Bachelor thesis: <em>Randomness Test Based on Deep Learning
-                  Techniques</em>.
-                </p>
-              </div>
+            <article class="career-entry">
+              <header class="career-entry-heading">
+                <h3>B.Eng. in Telecommunication Systems Engineering</h3>
+                <p class="career-period">Sep. 2016–Jun. 2020</p>
+              </header>
+              <p class="career-affiliation"><a href="https://www.uma.es" target="_blank" rel="noopener noreferrer"><img class="career-logo" src="resources/logos/inst-uma.png" alt="" width="128" height="128" decoding="async">&nbsp;University of Malaga</a> <span class="career-place">· Malaga, Spain</span></p>
+              <p class="career-detail">Bachelor thesis: <em>Randomness Test Based on Deep Learning Techniques</em>.</p>
             </article>
           </div>
         </section>
-
-        <section class="panel" id="experience">
-          <div class="section-heading">
-            <p class="section-label">Work Experience</p>
-            <h2>Research, engineering, and entrepreneurship.</h2>
-          </div>
-          <div class="timeline">
-            <article class="timeline-item">
-              <div class="timeline-aside">
-                <p class="timeline-period">Jan. 2025–present</p>
-                <div class="timeline-logos">
-                  <a class="timeline-logo-link" href="https://www.jpl.nasa.gov/" target="_blank" rel="noopener noreferrer" aria-label="NASA Jet Propulsion Laboratory">
-                    <img class="timeline-logo" src="resources/logos/inst-nasa.png" alt="" width="32" height="32" decoding="async" />
-                  </a>
-                </div>
-              </div>
-              <div class="entry-body">
-                <h3 class="entry-role">Visiting Researcher</h3>
-                <p class="entry-org">NASA Jet Propulsion Laboratory</p>
-                <p class="entry-location">California, USA</p>
-                <p class="entry-text">
-                  Developing machine learning methods for autonomous lunar rover
-                  exploration, including graph attention-based communication
-                  policies and foundation-model-driven decision making.
-                </p>
-              </div>
+        <section class="career-section" id="experience" aria-labelledby="experience-title">
+          <h2 id="experience-title">Work experience</h2>
+          <div class="career-list">
+            <article class="career-entry">
+              <header class="career-entry-heading">
+                <h3>Doctoral Researcher</h3>
+                <p class="career-period">Oct. 2023–Oct. 2026</p>
+              </header>
+              <p class="career-affiliation"><a href="https://www.uma.es" target="_blank" rel="noopener noreferrer"><img class="career-logo" src="resources/logos/inst-uma.png" alt="" width="128" height="128" decoding="async">&nbsp;University of Málaga</a> <span class="career-place">· Málaga, Spain</span></p>
+              <p class="career-detail">Worked on machine learning for communications in LEO satellite constellations and lunar rover networks, with collaborations spanning ESA SatNEx, NASA JPL, and Johns Hopkins University.</p>
+              <section class="research-visit" id="nasa-jpl">
+                <header class="career-entry-heading">
+                  <h4><a href="https://www.jpl.nasa.gov/" target="_blank" rel="noopener noreferrer"><img class="career-logo" src="resources/logos/inst-nasa.png" alt="" width="128" height="128" decoding="async">&nbsp;NASA Jet Propulsion Laboratory</a></h4>
+                  <p class="career-period">Jan. 2025–Oct. 2026</p>
+                </header>
+                <p class="visit-role">Visiting Researcher · California, USA</p>
+                <p class="career-detail">Developed machine learning methods for autonomous lunar rover exploration, including graph attention-based communication policies and foundation-model-driven decision making.</p>
+                <div class="story-links"><a href="press.html#uma-imfahe">UMA profile</a> <a href="press.html#sur-jpl">SUR interview</a></div>
+              </section>
+              <section class="research-visit" id="jhu-ace">
+                <header class="career-entry-heading">
+                  <h4><a href="https://acelab.me.jhu.edu/" target="_blank" rel="noopener noreferrer"><img class="career-logo" src="resources/logos/inst-jhu.png" alt="" width="128" height="128" decoding="async">&nbsp;Johns Hopkins University ACE Lab</a></h4>
+                  <p class="career-period">Mar. 2026–Oct. 2026</p>
+                </header>
+                <p class="visit-role">Visiting Researcher · Baltimore, USA</p>
+                <p class="career-detail">Developed foundation models for autonomous lunar rover exploration at the ACE Lab.</p>
+              </section>
             </article>
-
-            <article class="timeline-item">
-              <div class="timeline-aside">
-                <p class="timeline-period">Mar. 2026–present</p>
-                <div class="timeline-logos">
-                  <a class="timeline-logo-link" href="https://acelab.me.jhu.edu/" target="_blank" rel="noopener noreferrer" aria-label="Johns Hopkins University ACE Lab">
-                    <img class="timeline-logo" src="resources/logos/inst-jhu.png" alt="" width="32" height="32" decoding="async" />
-                  </a>
-                </div>
-              </div>
-              <div class="entry-body">
-                <h3 class="entry-role">Visiting Researcher</h3>
-                <p class="entry-org">Johns Hopkins University</p>
-                <p class="entry-location">Baltimore, USA</p>
-                <p class="entry-text">
-                  Developing foundation models for autonomous lunar rover
-                  exploration at the ACE Lab.
-                </p>
-              </div>
+            <article class="career-entry">
+              <header class="career-entry-heading">
+                <h3>Founder and CEO</h3>
+                <p class="career-period">Jan. 2022–Jan. 2026</p>
+              </header>
+              <p class="career-affiliation"><img class="career-logo" src="resources/logos/inst-blueberry-malaga.png" alt="" width="1278" height="1083" decoding="async">&nbsp;Blueberry Malaga <span class="career-place">· Malaga, Spain</span></p>
+              <p class="career-detail">Led a tech-education startup that reached more than 1,000 students through programs delivered with universities, schools, Google, and OPPLUS.</p>
             </article>
-
-            <article class="timeline-item">
-              <div class="timeline-aside">
-                <p class="timeline-period">Oct. 2023–present</p>
-                <div class="timeline-logos">
-                  <a class="timeline-logo-link" href="https://www.uma.es" target="_blank" rel="noopener noreferrer" aria-label="University of Malaga">
-                    <img class="timeline-logo" src="resources/logos/inst-uma.png" alt="" width="32" height="32" decoding="async" />
-                  </a>
-                </div>
-              </div>
-              <div class="entry-body">
-                <h3 class="entry-role">Doctoral Researcher</h3>
-                <p class="entry-org">University of Malaga</p>
-                <p class="entry-location">Malaga, Spain</p>
-                <p class="entry-text">
-                  Working on machine learning for communications in LEO
-                  satellite constellations and lunar rover networks, with
-                  collaborations spanning ESA SatNEx, NASA JPL, and Johns
-                  Hopkins University.
-                </p>
-              </div>
+            <article class="career-entry">
+              <header class="career-entry-heading">
+                <h3>Research Fellow</h3>
+                <p class="career-period">Mar. 2023–Sep. 2023</p>
+              </header>
+              <p class="career-affiliation"><a href="https://www.dlr.de/en" target="_blank" rel="noopener noreferrer"><img class="career-logo" src="resources/logos/inst-dlr.png" alt="" width="128" height="128" decoding="async">&nbsp;German Space Agency, DLR</a> <span class="career-place">· Munich, Germany</span></p>
+              <p class="career-detail">Built a high-precision smartphone urban navigation pipeline combining GNSS, deep learning, map matching, particle filters, and sensor fusion in MATLAB and Python.</p>
             </article>
-
-            <article class="timeline-item">
-              <div class="timeline-aside">
-                <p class="timeline-period">Jan. 2022–Jan. 2026</p>
-                <div class="timeline-logos">
-                  <img class="timeline-logo" src="resources/logos/inst-blueberry-malaga.png" alt="" width="32" height="32" decoding="async" />
-                </div>
-              </div>
-              <div class="entry-body">
-                <h3 class="entry-role">Founder and CEO</h3>
-                <p class="entry-org">Blueberry Malaga</p>
-                <p class="entry-location">Malaga, Spain</p>
-                <p class="entry-text">
-                  Led a tech-education startup that reached more than 1,000
-                  students through programs delivered with universities, schools,
-                  Google, and OPPLUS.
-                </p>
-              </div>
+            <article class="career-entry">
+              <header class="career-entry-heading">
+                <h3>Research Assistant</h3>
+                <p class="career-period">Sep. 2021–Feb. 2023</p>
+              </header>
+              <p class="career-affiliation"><a href="https://www.uma.es" target="_blank" rel="noopener noreferrer"><img class="career-logo" src="resources/logos/inst-uma.png" alt="" width="128" height="128" decoding="async">&nbsp;University of Malaga</a> <span class="career-place">· Malaga, Spain</span></p>
+              <p class="career-detail">Jul. 2022–Feb. 2023: Developed a Multi-Agent Reinforcement Learning algorithm for LEO satellite constellations in Python in collaboration with Aalborg University and ESA under SatNEx V work item 2.6 (<em>Learning Space Networks</em>).</p>
+              <p class="career-detail">Sep. 2021–Jan. 2022: Developed an AI-based 5G prediction algorithm in Python in collaboration with Ericsson.</p>
             </article>
-
-            <article class="timeline-item">
-              <div class="timeline-aside">
-                <p class="timeline-period">Mar. 2023–Sep. 2023</p>
-                <div class="timeline-logos">
-                  <a class="timeline-logo-link" href="https://www.dlr.de/en" target="_blank" rel="noopener noreferrer" aria-label="German Space Agency, DLR">
-                    <img class="timeline-logo" src="resources/logos/inst-dlr.png" alt="" width="32" height="32" decoding="async" />
-                  </a>
-                </div>
-              </div>
-              <div class="entry-body">
-                <h3 class="entry-role">Research Fellow</h3>
-                <p class="entry-org">German Space Agency, DLR</p>
-                <p class="entry-location">Munich, Germany</p>
-                <p class="entry-text">
-                  Built a high-precision smartphone urban navigation pipeline
-                  combining GNSS, deep learning, map matching, particle filters,
-                  and sensor fusion in MATLAB and Python.
-                </p>
-              </div>
-            </article>
-
-            <article class="timeline-item">
-              <div class="timeline-aside">
-                <p class="timeline-period">Sep. 2021–Feb. 2023</p>
-                <div class="timeline-logos">
-                  <a class="timeline-logo-link" href="https://www.uma.es" target="_blank" rel="noopener noreferrer" aria-label="University of Malaga">
-                    <img class="timeline-logo" src="resources/logos/inst-uma.png" alt="" width="32" height="32" decoding="async" />
-                  </a>
-                </div>
-              </div>
-              <div class="entry-body">
-                <h3 class="entry-role">Research Assistant</h3>
-                <p class="entry-org">University of Malaga</p>
-                <p class="entry-location">Malaga, Spain</p>
-                <p class="entry-text">
-                  Jul. 2022–Feb. 2023: Developed a Multi-Agent Reinforcement
-                  Learning algorithm for LEO satellite constellations in Python
-                  in collaboration with Aalborg University and ESA under SatNEx
-                  V work item 2.6 (<em>Learning Space Networks</em>).
-                </p>
-                <p class="entry-text">
-                  Sep. 2021–Jan. 2022: Developed an AI-based 5G prediction
-                  algorithm in Python in collaboration with Ericsson.
-                </p>
-              </div>
-            </article>
-
-            <article class="timeline-item">
-              <div class="timeline-aside">
-                <p class="timeline-period">Sep. 2020–Feb. 2021</p>
-                <div class="timeline-logos">
-                  <a class="timeline-logo-link" href="https://futureconnections.es" target="_blank" rel="noopener noreferrer" aria-label="Future Connections">
-                    <img class="timeline-logo" src="resources/logos/inst-future-connections.png" alt="" width="32" height="32" decoding="async" />
-                  </a>
-                </div>
-              </div>
-              <div class="entry-body">
-                <h3 class="entry-role">Machine Learning and Backend Intern</h3>
-                <p class="entry-org">Future Connections</p>
-                <p class="entry-location">Malaga, Spain</p>
-                <p class="entry-text">
-                  Contributed to a real-time vehicle detection application based
-                  on convolutional neural networks.
-                </p>
-              </div>
+            <article class="career-entry">
+              <header class="career-entry-heading">
+                <h3>Machine Learning and Backend Intern</h3>
+                <p class="career-period">Sep. 2020–Feb. 2021</p>
+              </header>
+              <p class="career-affiliation"><a href="https://futureconnections.es" target="_blank" rel="noopener noreferrer"><img class="career-logo" src="resources/logos/inst-future-connections.png" alt="" width="128" height="128" decoding="async">&nbsp;Future Connections</a> <span class="career-place">· Malaga, Spain</span></p>
+              <p class="career-detail">Contributed to a real-time vehicle detection application based on convolutional neural networks.</p>
             </article>
           </div>
         </section>

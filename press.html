@@ -4,44 +4,127 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="resources/favicon.svg" type="image/svg+xml" />
-    <title>Press | Federico Lozano-Cuadra</title>
+    <title>Events &amp; media | Federico Lozano-Cuadra</title>
     <meta name="description" content="Media coverage of Federico Lozano-Cuadra." />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="navigation.js" defer></script>
+    <script src="constellations.js" defer></script>
   </head>
   <body>
-    <div class="ambient ambient-left" aria-hidden="true"></div>
-    <div class="ambient ambient-right" aria-hidden="true"></div>
 
     <div class="page-shell">
       <header class="site-header">
-        <nav class="site-nav" aria-label="Primary navigation">
-          <a href="index.html">Home</a>
-          <a href="index.html#research">Research</a>
-          <a href="index.html#publications">Publications</a>
+        <a class="wordmark" href="./" aria-label="Federico Lozano-Cuadra, home">Federico Lozano-Cuadra</a>
+        <button class="menu-switch" type="button" aria-controls="primary-links" aria-expanded="false" hidden>Menu <span aria-hidden="true">☰</span></button>
+        <nav class="site-nav" id="primary-links" aria-label="Primary navigation">
+          <a href="./">Home</a>
+          <a href="research/">Research</a>
           <a href="career.html">Career</a>
-          <a href="awards.html">Awards</a>
-          <a href="press.html" aria-current="page">Press</a>
-          <a href="activities.html">Activities</a>
           <a href="entrepreneurship.html">Entrepreneurship</a>
+          <a href="awards.html">Awards</a>
+          <a href="press.html" aria-current="page">Events &amp; media</a>
+          <a href="book.html" class="nav-book">Book me</a>
         </nav>
       </header>
 
       <main>
+        <section class="panel events-panel" aria-labelledby="events">
+          <div class="collection-head">
+            <h1 id="events">Organized events</h1>
+            <div class="story-links"><a href="#talks-outreach">Talks</a><a href="#hackathons">Hackathons</a><a href="#media">Media coverage</a></div>
+          </div>
+          <div class="event-spread">
+            <article class="event-story" id="ieee-cai">
+              <a href="https://space-robots.org/events/cai2026/"><img src="resources/events/ieee-cai.webp" alt="Official session artwork for AI for Space Exploration at IEEE CAI 2026." width="1440" height="867"></a>
+              <p class="dateline">May 10, 2026 · Granada, Spain</p>
+              <h2><a href="https://space-robots.org/events/cai2026/">AI for Space Exploration at IEEE CAI</a></h2>
+              <p class="event-role">Organizer and session chair</p>
+              <p>Inaugural special session organized with NASA Ames at the IEEE Conference on Artificial Intelligence.</p>
+              <p class="venue">11:30–13:30 · Aula 109, Escuela Técnica Superior de Ingeniería de Caminos, Canales y Puertos, University of Granada</p>
+              <div class="story-links"><a href="https://space-robots.org/events/cai2026/">Session site</a> <a href="https://www.ieeesmc.org/cai-2026/special-sessions/#ss3">Session details</a> <a href="https://www.ieeesmc.org/cai-2026/detailed-schedule/#SS3-SPACE">Accepted papers</a> <a href="https://www.linkedin.com/posts/ilopezfrancos_on-may-10-we-held-the-inaugural-ai-for-activity-7462371614060445696-Z_nZ?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAC7OFGgBwZKuHKcPIDAKYZcogZr9c8OCcU4">LinkedIn</a></div>
+            </article>
+            <article class="event-story" id="malaga-forum">
+              <a href="https://fedeloz.github.io/AIxSpace/"><img src="resources/events/malaga-panel.webp" alt="Panelists discussing space exploration at the University of Málaga." width="1280" height="720"></a>
+              <p class="dateline">May 8, 2026 · Málaga, Spain</p>
+              <h2><a href="https://fedeloz.github.io/AIxSpace/">AI × Space Málaga Forum</a></h2>
+              <p class="event-role">Organizer and moderator</p>
+              <p>Researchers and engineers from NASA ARC/KBR, Google Cloud, Indra, AERTEC, DHV Technology, and UMA joined the first forum.</p>
+              <p class="venue">10:30–12:30 · Sala de Juntas, ETSI de Telecomunicación, University of Málaga</p>
+              <div class="story-links"><a href="https://fedeloz.github.io/AIxSpace/">Forum site</a> <a href="https://www.linkedin.com/posts/federico-lozano-cuadra_ai-space-aixspaceabrmalagaabr2026-ugcPost-7459905239756955648-jTGh?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAC7OFGgBwZKuHKcPIDAKYZcogZr9c8OCcU4">LinkedIn</a> <a href="#forum-coverage">Media coverage ↓</a></div>
+            </article>
+          </div>
+        </section>
+        <section class="panel" aria-labelledby="talks-outreach">
+          <div class="collection-head"><h2 id="talks-outreach">Talks and outreach</h2></div>
+          <div class="event-spread outreach">
+            <article class="event-story" id="ames-talk">
+              <a class="archive-photo " href="resources/events/ames-rovers.webp" aria-label="Open photograph: Federico beside the title slide of his NASA Ames presentation"><img src="resources/events/ames-rovers.webp" width="800" height="571" alt="Federico beside the title slide of his NASA Ames presentation" loading="lazy"></a>
+              <p class="dateline">Jan. 29, 2026 · NASA Ames Research Center, California</p>
+              <h3>Learning multi-agent delay-tolerant routing policies for lunar rover exploration</h3>
+              <p>I presented how lunar rovers can learn to relay observations when their connection to the lander comes and goes.</p>
+              <div class="story-links">
+                <a href="https://www.linkedin.com/posts/federico-lozano-cuadra_last-week-i-presented-at-nasa-ames-research-activity-7426308872862216192-Sqqz">Talk photos and recap</a> <a href="research/gatmarl/">Lunar rover routing project</a>
+              </div>
+            </article>
+            <article class="event-story" id="coit-talk">
+              <a class="archive-photo " href="resources/events/coit-closing.webp" aria-label="Open photograph: Federico with the COIT organizers at the close of the talk"><img src="resources/events/coit-closing.webp" width="1120" height="840" alt="Federico with the COIT organizers at the close of the talk" loading="lazy"></a>
+              <p class="dateline">Oct. 17, 2025 · Uppery Club, Málaga</p>
+              <h3>Machine learning and space communications</h3>
+              <p>At COIT’s San Gabriel gathering, I shared what I learned at NASA JPL and how telecommunications research supports space exploration.</p>
+              <div class="story-links">
+                <a href="resources/events/coit-space.webp">Photo from the talk</a> <a href="https://es.linkedin.com/posts/coit-aita-aorm_%F0%9D%97%96%F0%9D%97%B2%F0%9D%97%B9%F0%9D%97%B2%F0%9D%97%AF%F0%9D%97%BF%F0%9D%97%AE%F0%9D%97%B0%F0%9D%97%B6%C3%B3%F0%9D%97%BB-%F0%9D%97%B1%F0%9D%97%B2-%F0%9D%97%A6%F0%9D%97%AE%F0%9D%97%BB-%F0%9D%97%9A%F0%9D%97%AE%F0%9D%97%AF%F0%9D%97%BF%F0%9D%97%B6%F0%9D%97%B2%F0%9D%97%B9-activity-7385931239670755328-VRzr">COIT event photos and recap</a>
+              </div>
+            </article>
+            <article class="event-story" id="imfe-forum">
+              <a class="archive-photo" href="resources/events/imfe-ai-forum.webp" aria-label="Open full photograph: Speaker and audience at the IMFE business forum in Málaga"><img src="resources/events/imfe-ai-forum.webp" width="800" height="800" alt="Speaker and audience at the IMFE business forum in Málaga" loading="lazy"></a>
+              <p class="dateline">Oct. 10, 2024 · Málaga, Spain</p>
+              <h3>Unlock the Power of AI</h3>
+              <p>At IMFE’s business forum, I co-presented a talk on the history of AI and how companies use it.</p>
+              <p class="venue">Google Safety Engineering Center, Málaga · Photo: Ayuntamiento de Málaga / IMFE</p>
+              <div class="story-links"><a href="https://imfe.malaga.eu/proximos-cursos/index.html?categoria=Unidad+de+Empresas&amp;codCurso=2461">IMFE program</a> <a href="https://www.linkedin.com/posts/federico-lozano-cuadra_ai-space-startup-activity-7286763676454281218-I1X-/">Photos and recap</a></div>
+            </article>
+            <article class="event-story" id="astroteleco">
+              <a class="archive-photo" href="resources/events/astroteleco.webp" aria-label="Open full photograph: Participants at the AstroTeleco Málaga final"><img src="resources/events/astroteleco.webp" width="800" height="476" alt="Participants at the AstroTeleco Málaga final" loading="lazy"></a>
+              <p class="dateline">Apr. 15, 2024 · Málaga, Spain</p>
+              <h3>AstroTeleco Málaga</h3>
+              <p>I helped judge projects from five schools exploring how astronomy and telecommunications connect.</p>
+              <p class="venue">ETSI de Telecomunicación, University of Málaga · Teleco Renta and Blueberry Malaga</p>
+              <div class="story-links"><a href="https://es.linkedin.com/posts/blueberry-malaga_bilbao-blueberryers-tecnolog%C3%ADa-activity-7187060307939213312-PJbe">Event recap and photos</a></div>
+            </article>
+          </div>
+        </section>
+        <section class="panel" aria-labelledby="hackathons">
+          <div class="collection-head">
+            <h2 id="hackathons">Hackathons</h2>
+          </div>
+          <div class="event-spread outreach">
+            <article class="event-story" id="hackspain">
+              <a class="archive-photo " href="resources/events/hackspain-winners.webp" aria-label="Open photograph: Los Panaderos on stage with the HackSpain overall winner and HappyRobot track winner posters"><img src="resources/events/hackspain-winners.webp" width="1280" height="719" alt="Los Panaderos on stage with the HackSpain overall winner and HappyRobot track winner posters" loading="lazy"></a>
+              <p class="dateline">Sept. 18–20, 2026 · ETSIT, Universidad Politécnica de Madrid</p>
+              <h3>HackSpain · HappyRobot track winner</h3>
+              <p>Our team, Los Panaderos, built a system that coordinates drones for wildfire response. Firefighters helped us design the workflow.</p>
+              <div class="story-links">
+                <a href="https://hackspain.g-villar.tech">Project and demo</a> <a href="https://github.com/Fedeloz/Los_Panaderos">GitHub repository</a> <a href="https://es.linkedin.com/posts/guillermo-villar-sanchez_ya-ha-terminado-hackspain-2026-todav%C3%ADa-activity-7508204342785613826-Da3Z">Team’s LinkedIn recap</a> <a href="https://hackspain.com/cronica">Organizer’s results</a> <a href="awards.html#hackspain-award">HappyRobot track award</a>
+              </div>
+            </article>
+            <article class="event-story" id="farmsat">
+              <a class="archive-photo " href="resources/press/diario-sur-hackathon-2022.jpg" aria-label="Open photograph: FarmSat team after the Spanish CASSINI competition"><img src="resources/press/diario-sur-hackathon-2022.jpg" width="1248" height="770" alt="FarmSat team after the Spanish CASSINI competition" loading="lazy"></a>
+              <p class="dateline">Nov. 4–6, 2022 · UPC campus, Castelldefels, Barcelona</p>
+              <h3>CASSINI Hackathon · FarmSat</h3>
+              <p>We used Copernicus satellite data to assess agricultural risk. FarmSat won the Spanish competition, and I pitched it in the European final.</p>
+              <div class="story-links">
+                <a href="https://taikai.network/cassinihackathons/hackathons/financial-world/projects/cl9zxduk0158717201vta2bk4ytg/idea">FarmSat on TAIKAI</a> <a href="https://www.fib.upc.edu/es/noticias/4a-hackaton-cassini">UPC event program</a> <a href="#sur-cassini">Diario SUR team interview</a> <a href="awards.html#cassini">Spanish CASSINI award</a>
+              </div>
+            </article>
+          </div>
+        </section>
         <section class="panel press-panel" id="press">
           <div class="section-heading">
-            <p class="section-label">Press</p>
-            <h2>Media coverage</h2>
+            <a class="back-section" href="#events">↑ Organized events</a>
+            <h2 id="media">Media coverage</h2>
           </div>
-          <aside class="press-feature" aria-label="Diario Sur front page">
-            <a class="press-feature-image" href="resources/press/diario-sur-front-page-2025-03-10.png" target="_blank" rel="noopener noreferrer" aria-label="View the complete Diario Sur front page">
-              <img src="resources/press/diario-sur-front-page-2025-03-10.png" alt="Complete Diario Sur front page of March 10, 2025, featuring Federico Lozano beside the NASA sign under the headline De la UMA a la NASA, un sueño cumplido" width="2221" height="2914" fetchpriority="high" decoding="async" />
-            </a>
-            <div class="press-feature-copy">
-              <p class="press-outlet">Diario Sur · Mar. 10, 2025</p>
-              <h3 lang="es"><a href="https://portadas.diariosur.es/2025/03/10.html" target="_blank" rel="noopener noreferrer">De la UMA a la NASA, un sueño cumplido</a></h3>
-              <a class="press-feature-link" href="https://portadas.diariosur.es/2025/03/10.html" target="_blank" rel="noopener noreferrer">View full front page <span aria-hidden="true">↗</span></a>
-            </div>
-          </aside>
+          <figure class="press-feature"><a class="press-feature-image" href="resources/press/diario-sur-front-page-2025-03-10.png"><img src="resources/press/diario-sur-front-page-preview.webp" width="760" height="997" alt="Complete Diario SUR front page for March 10, 2025, featuring Federico at JPL" loading="lazy"></a><figcaption><a href="#sur-jpl">Diario SUR · De la UMA a la NASA, un sueño cumplido</a></figcaption></figure>
           <div class="press-grid">
             <article class="press-item timeline-item">
               <div class="timeline-aside">
@@ -66,7 +149,7 @@
                 rel="noopener noreferrer"
               >
                 <img
-                  src="https://i.ytimg.com/vi/7TKK2V-oQKY/hqdefault.jpg"
+                  src="resources/press/podcast-pedro-2026.webp"
                   alt=""
                   width="380"
                   height="285"
@@ -90,8 +173,7 @@
                   path from the Moon to Mars.
                 </p>
                 <p class="press-related">
-                  Related:
-                  <a href="career.html#experience">NASA JPL</a>
+                  Related: <a href="career.html#nasa-jpl">NASA JPL research experience</a>
                 </p>
                   </div>
                 </div>
@@ -121,7 +203,7 @@
                 rel="noopener noreferrer"
               >
                 <img
-                  src="https://www.cope.es/files/og_thumbnail/uploads/2024/08/31/66d2dc37985ec.jpeg"
+                  src="resources/press/cope-la-tarde-2026.webp"
                   alt=""
                   width="380"
                   height="285"
@@ -143,8 +225,7 @@
                   lunar rovers and future Moon and Mars exploration.
                 </p>
                 <p class="press-related">
-                  Related:
-                  <a href="career.html#experience">NASA JPL</a>
+                  Related: <a href="career.html#nasa-jpl">NASA JPL research experience</a>
                 </p>
                   </div>
                 </div>
@@ -174,7 +255,7 @@
                 rel="noopener noreferrer"
               >
                 <img
-                  src="https://i.ytimg.com/vi/l283yqhQV9I/hqdefault.jpg"
+                  src="resources/press/ptv-malaga-2026.webp"
                   alt=""
                   width="380"
                   height="285"
@@ -197,64 +278,36 @@
                   communications.
                 </p>
                 <p class="press-related">
-                  Related:
-                  <a href="career.html#experience">NASA JPL</a>
+                  Related: <a href="career.html#nasa-jpl">NASA JPL research experience</a>
                 </p>
                   </div>
                 </div>
               </div>
             </article>
 
-            <article class="press-item timeline-item">
-              <div class="timeline-aside">
+            <article class="press-item timeline-item" id="forum-coverage">
+              <div class="timeline-aside" id="sur-forum">
                 <p class="timeline-period">May 8, 2026</p>
                 <div class="timeline-logos">
-                  <a class="timeline-logo-link" href="https://www.diariosur.es/tecnologia/ingenieros-nasa-indra-google-comparten-avances-ia-20260508201527-nt.html" target="_blank" rel="noopener noreferrer" aria-label="Diario Sur">
-                    <img class="timeline-logo" src="resources/logos/press-diario-sur.png" alt="" width="32" height="32" decoding="async" />
+                  <a class="timeline-logo-link" href="https://www.uma.es/etsi-de-telecomunicacion/noticias/la-escuela-acoge-unas-jornadas-avances-de-la-ia-para-la-exploracion-espacial/" aria-label="University of Málaga">
+                    <img class="timeline-logo" src="resources/logos/inst-uma.png" alt="" width="32" height="32" decoding="async">
                   </a>
                 </div>
-                <p class="press-category press-category--press">
-                  <img src="resources/logos/media-press.svg" alt="" width="16" height="16" decoding="async" />
-                  Press
+                <p class="press-category press-category--press-release">
+                  <img src="resources/logos/media-press-release.svg" alt="" width="16" height="16" decoding="async">
+                  Press release
                 </p>
               </div>
               <div class="entry-body">
-                <p class="press-outlet">Diario Sur</p>
+                <p class="press-outlet">University of Málaga · Diario SUR</p>
                 <div class="press-entry">
-                  <a
-                class="press-media"
-                href="https://www.diariosur.es/tecnologia/ingenieros-nasa-indra-google-comparten-avances-ia-20260508201527-nt.html"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="https://s1.ppllstatics.com/diariosur/www/multimedia/2026/05/08/SUR_20260508_115010_vb25kvtw7h-RvaSqINrJaTEhlBHOErLlHM-1200x840@Diario%20Sur.jpg"
-                  alt=""
-                  width="380"
-                  height="285"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </a>
+                  <a class="press-media" href="https://www.uma.es/etsi-de-telecomunicacion/noticias/la-escuela-acoge-unas-jornadas-avances-de-la-ia-para-la-exploracion-espacial/">
+                    <img src="resources/events/malaga-forum.webp" alt="Speakers and organizers at the AI × Space Málaga Forum." width="900" height="630" loading="lazy" decoding="async">
+                  </a>
                   <div class="press-copy">
-                    <h3>
-                  <a
-                    href="https://www.diariosur.es/tecnologia/ingenieros-nasa-indra-google-comparten-avances-ia-20260508201527-nt.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >NASA, Indra, and Google engineers share AI advances for space
-                    exploration</a
-                  >
-                </h3>
-                <p class="entry-text">
-                  Coverage of the first AI x Space Malaga Forum at ETSIT UMA,
-                  with speakers from NASA, Indra, Google, DHV Technology, and
-                  Aertec.
-                </p>
-                <p class="press-related">
-                  Related:
-                  <a href="activities.html">AI x Space Malaga Forum 2026</a>
-                </p>
+                    <h3><a href="https://www.uma.es/etsi-de-telecomunicacion/noticias/la-escuela-acoge-unas-jornadas-avances-de-la-ia-para-la-exploracion-espacial/">AI × Space Málaga Forum</a></h3>
+                    <p class="entry-text">The first AI × Space Málaga Forum brought researchers and engineers together at the University of Málaga to discuss how AI is used in space exploration.</p>
+                    <p class="press-related"><a href="https://www.uma.es/etsi-de-telecomunicacion/noticias/la-escuela-acoge-unas-jornadas-avances-de-la-ia-para-la-exploracion-espacial/">UMA press release</a> · <a href="https://www.diariosur.es/tecnologia/ingenieros-nasa-indra-google-comparten-avances-ia-20260508201527-nt.html">Diario SUR article</a> · <a href="#malaga-forum">AI × Space Forum program</a></p>
                   </div>
                 </div>
               </div>
@@ -283,7 +336,7 @@
                 rel="noopener noreferrer"
               >
                 <img
-                  src="https://s2.ppllstatics.com/diariosur/www/multimedia/2026/04/09/VIDEO-federico-lozano-estudiante-malagueo.jpg"
+                  src="resources/press/sur-video-2026.webp"
                   alt=""
                   width="380"
                   height="285"
@@ -306,15 +359,14 @@
                   Propulsion Laboratory.
                 </p>
                 <p class="press-related">
-                  Related:
-                  <a href="career.html#experience">NASA JPL</a>
+                  Related: <a href="career.html#nasa-jpl">NASA JPL research experience</a>
                 </p>
                   </div>
                 </div>
               </div>
             </article>
 
-            <article class="press-item timeline-item">
+            <article class="press-item timeline-item" id="uma-thesis-awards">
               <div class="timeline-aside">
                 <p class="timeline-period">Feb. 9, 2026</p>
                 <div class="timeline-logos">
@@ -337,7 +389,7 @@
                 rel="noopener noreferrer"
               >
                 <img
-                  src="https://www.uma.es/media/content_images/premiadosw_TALi5JJ.jpg"
+                  src="resources/awards/uma-thesis.webp"
                   alt=""
                   width="380"
                   height="285"
@@ -369,14 +421,14 @@
                 </p>
                 <p class="press-related">
                   Related:
-                  <a href="awards.html">Accésit, Cátedra de Comercio</a>
+                  <a href="awards.html#thesis-award">Accésit, Cátedra de Comercio</a>
                 </p>
                   </div>
                 </div>
               </div>
             </article>
 
-            <article class="press-item timeline-item">
+            <article class="press-item timeline-item" id="sur-100-malaguenos">
               <div class="timeline-aside">
                 <p class="timeline-period">Dec. 27, 2025</p>
                 <div class="timeline-logos">
@@ -399,7 +451,7 @@
                 rel="noopener noreferrer"
               >
                 <img
-                  src="https://s2.ppllstatics.com/diariosur/www/multimedia/2025/12/24/WhatsApp%20Image%202025-03-03%20at%2019-R33lGI6HyAt4Fag3KBcAmoN-1200x840@Diario%20Sur.jpg"
+                  src="resources/press/sur-100-malaguenos-2025.webp"
                   alt=""
                   width="380"
                   height="285"
@@ -424,7 +476,7 @@
                 </p>
                 <p class="press-related">
                   Related:
-                  <a href="awards.html">100 Malagueños del Año 2025</a>
+                  <a href="awards.html#malaguenos-2025">100 Malagueños del Año 2025</a>
                 </p>
                   </div>
                 </div>
@@ -454,7 +506,7 @@
                 rel="noopener noreferrer"
               >
                 <img
-                  src="https://i.ytimg.com/vi/ASE12E3eT7M/hqdefault.jpg"
+                  src="resources/press/podcast-andy-2025.webp"
                   alt=""
                   width="380"
                   height="285"
@@ -479,8 +531,7 @@
                   exploration.
                 </p>
                 <p class="press-related">
-                  Related:
-                  <a href="career.html#experience">NASA JPL</a>
+                  Related: <a href="career.html#nasa-jpl">NASA JPL research experience</a>
                 </p>
                   </div>
                 </div>
@@ -540,15 +591,14 @@
                   for Federico's segment.
                 </p>
                 <p class="press-related">
-                  Related:
-                  <a href="career.html#experience">NASA JPL</a>
+                  Related: <a href="career.html#nasa-jpl">NASA JPL research experience</a>
                 </p>
                   </div>
                 </div>
               </div>
             </article>
 
-            <article class="press-item timeline-item">
+            <article class="press-item timeline-item" id="sur-fulbright">
               <div class="timeline-aside">
                 <p class="timeline-period">Apr. 12, 2025</p>
                 <div class="timeline-logos">
@@ -571,7 +621,7 @@
                 rel="noopener noreferrer"
               >
                 <img
-                  src="https://s2.ppllstatics.com/diariosur/www/multimedia/2025/04/12/WhatsApp%20Image%202025-03-03%20at%2019-RqY04nlor9jL0jVkB47350N-1200x840@Diario%20Sur.jpg"
+                  src="resources/press/sur-fulbright-2025.webp"
                   alt=""
                   width="380"
                   height="285"
@@ -595,14 +645,14 @@
                 </p>
                 <p class="press-related">
                   Related:
-                  <a href="awards.html">Fulbright Predoctoral Fellowship</a>
+                  <a href="awards.html#fulbright">Fulbright Predoctoral Fellowship</a>
                 </p>
                   </div>
                 </div>
               </div>
             </article>
 
-            <article class="press-item timeline-item">
+            <article class="press-item timeline-item" id="junta-fulbright">
               <div class="timeline-aside">
                 <p class="timeline-period">Apr. 12, 2025</p>
                 <div class="timeline-logos">
@@ -650,14 +700,14 @@
                 </p>
                 <p class="press-related">
                   Related:
-                  <a href="awards.html">Fulbright Predoctoral Fellowship</a>
+                  <a href="awards.html#fulbright">Fulbright Predoctoral Fellowship</a>
                 </p>
                   </div>
                 </div>
               </div>
             </article>
 
-            <article class="press-item timeline-item">
+            <article class="press-item timeline-item" id="uma-imfahe">
               <div class="timeline-aside">
                 <p class="timeline-period">Mar. 11, 2025</p>
                 <div class="timeline-logos">
@@ -680,7 +730,7 @@
                 rel="noopener noreferrer"
               >
                 <img
-                  src="https://www.uma.es/media/content_images/NASA_zuEp7Q3_FpNA9xO.jpg"
+                  src="resources/awards/uma-imfahe.webp"
                   alt=""
                   width="380"
                   height="285"
@@ -705,15 +755,15 @@
                 </p>
                 <p class="press-related">
                   Related:
-                  <a href="awards.html">IMFAHE Excellence Fellowship</a>,
-                  <a href="career.html#experience">NASA JPL</a>
+                  <a href="awards.html#imfahe">IMFAHE Excellence Fellowship</a>,
+                  <a href="career.html#nasa-jpl">NASA JPL research experience</a>
                 </p>
                   </div>
                 </div>
               </div>
             </article>
 
-            <article class="press-item timeline-item">
+            <article class="press-item timeline-item" id="sur-jpl">
               <div class="timeline-aside">
                 <p class="timeline-period">Mar. 10, 2025</p>
                 <div class="timeline-logos">
@@ -736,7 +786,7 @@
                 rel="noopener noreferrer"
               >
                 <img
-                  src="https://s2.ppllstatics.com/diariosur/www/multimedia/2025/03/03/WhatsApp%20Image%202025-03-03%20at%2019.44.18-RtjJvLLsmPzpnUZgNpsTLuK-1200x840@Diario%20Sur.jpeg"
+                  src="resources/press/sur-jpl-2025.webp"
                   alt=""
                   width="380"
                   height="285"
@@ -759,16 +809,16 @@
                   rover communications with AI, his UMA-IMFAHE fellowship, and
                   SatCom group background.
                 </p>
+                <div class="story-links"><a href="resources/press/diario-sur-front-page-2025-03-10.png">Full-size front page</a><a href="https://portadas.diariosur.es/2025/03/10.html" target="_blank" rel="noopener noreferrer">SUR front-page archive</a></div>
                 <p class="press-related">
-                  Related:
-                  <a href="career.html#experience">NASA JPL</a>
+                  Related: <a href="career.html#nasa-jpl">NASA JPL research experience</a>
                 </p>
                   </div>
                 </div>
               </div>
             </article>
 
-            <article class="press-item timeline-item">
+            <article class="press-item timeline-item" id="imfahe-camp">
               <div class="timeline-aside">
                 <p class="timeline-period">May 27, 2024</p>
                 <div class="timeline-logos">
@@ -791,7 +841,7 @@
                 rel="noopener noreferrer"
               >
                 <img
-                  src="https://i.ytimg.com/vi/FD3FzjfVyUA/hqdefault.jpg"
+                  src="resources/press/imfahe-2024.webp"
                   alt=""
                   width="380"
                   height="285"
@@ -815,14 +865,32 @@
                 </p>
                 <p class="press-related">
                   Related:
-                  <a href="awards.html">IMFAHE Excellence Fellowship</a>
+                  <a href="awards.html#imfahe">IMFAHE Excellence Fellowship</a>
                 </p>
                   </div>
                 </div>
               </div>
             </article>
 
-            <article class="press-item timeline-item">
+            <article class="press-item timeline-item" id="fpi-coverage">
+              <div class="timeline-aside">
+                <p class="timeline-period">Apr. 2, 2024</p>
+                <div class="timeline-logos"><img class="timeline-logo" src="resources/logos/press-diario-sur.png" alt="Diario SUR" width="32" height="32"></div><p class="press-category press-category--press"><img src="resources/logos/media-press.svg" alt="" width="16" height="16">Press</p>
+              </div>
+              <div class="entry-body">
+                <p class="press-outlet">Diario SUR · Crónica Universitaria, pp. 6–7</p>
+                <div class="press-entry">
+                  <a class="press-media" href="resources/press/sur-fpi.webp" aria-label="Open the full SUR clipping"><img src="resources/press/sur-fpi.webp" alt="The two-page SUR feature on FPI scholarships" width="800" height="518" loading="lazy"></a>
+                  <div class="press-copy">
+                    <h3 lang="es">Una oportunidad para que los investigadores tengan un futuro</h3>
+                    <p class="entry-text">Three researchers describe what an FPI contract makes possible. I spoke about having several years to train and pursue my doctorate in space communications.</p>
+                    <div class="story-links"><a href="resources/press/sur-fpi.webp">Full clipping</a> <a href="https://www.linkedin.com/posts/federico-lozano-cuadra_phd-fpi-space-activity-7180958437785157635-P4tR/">Original post</a> <a href="awards.html#fpi">FPI scholarship</a></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="press-item timeline-item" id="blueberry-profile">
               <div class="timeline-aside">
                 <p class="timeline-period">Jan. 12, 2023</p>
                 <div class="timeline-logos">
@@ -870,15 +938,15 @@
                 </p>
                 <p class="press-related">
                   Related:
-                  <a href="awards.html">Spin-Off Winner</a>,
-                  <a href="entrepreneurship.html">Blueberry Malaga</a>
+                  <a href="awards.html#uma-spin-off">UMA Spin-Off entrepreneurship award</a>,
+                  <a href="entrepreneurship.html#entrepreneurship">Blueberry Málaga education project</a>
                 </p>
                   </div>
                 </div>
               </div>
             </article>
 
-            <article class="press-item timeline-item">
+            <article class="press-item timeline-item" id="sur-cassini">
               <div class="timeline-aside">
                 <p class="timeline-period">Nov. 9, 2022</p>
                 <div class="timeline-logos">
@@ -925,68 +993,16 @@
                 </p>
                 <p class="press-related">
                   Related:
-                  <a href="awards.html">Cassini 4th Hackathon Winner</a>
+                  <a href="awards.html#cassini">Spanish CASSINI award</a> · <a href="#farmsat">FarmSat hackathon project</a>
                 </p>
                   </div>
                 </div>
               </div>
             </article>
 
-            <article class="press-item timeline-item">
-              <div class="timeline-aside">
-                <p class="timeline-period">2022</p>
-                <div class="timeline-logos">
-                  <a class="timeline-logo-link" href="https://taikai.network/cassinihackathons/hackathons/financial-world/projects/cl9zxduk0158717201vta2bk4ytg/idea" target="_blank" rel="noopener noreferrer" aria-label="TAIKAI">
-                    <img class="timeline-logo" src="resources/logos/press-taikai.png" alt="" width="32" height="32" decoding="async" />
-                  </a>
-                </div>
-                <p class="press-category press-category--press">
-                  <img src="resources/logos/media-press.svg" alt="" width="16" height="16" decoding="async" />
-                  Press
-                </p>
-              </div>
-              <div class="entry-body">
-                <p class="press-outlet">TAIKAI · CASSINI Hackathons</p>
-                <div class="press-entry">
-                  <a
-                class="press-media"
-                href="https://taikai.network/cassinihackathons/hackathons/financial-world/projects/cl9zxduk0158717201vta2bk4ytg/idea"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="https://taikai.azureedge.net/eRJD_6IK6FHCwi5PLL6CaG2BhMx7a1l3JD_esuklSPI/rs:fit:350:0:0/aHR0cHM6Ly90YWlrYWkuYXp1cmVlZGdlLm5ldC9VQUctMnZ5bG02dktfRl9lU2hUOWtXRWEzS1A2STIyaUVIcUZvYUtxOFMwL3JzOmZpdDozNTA6MDowL2FIUjBjSE02THk5emRHOXlZV2RsTG1kdmIyZHNaV0Z3YVhNdVkyOXRMM1JoYVd0aGFTMXpkRzl5WVdkbEwybHRZV2RsY3k5ak5HTTNaVGxpTUMwMVpqVTRMVEV4WldRdFlUWTJPQzFtTnpnd09XVm1ZMk5tTURCbVlYSnRjMkYwTG5CdVp3"
-                  alt=""
-                  width="380"
-                  height="285"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </a>
-                  <div class="press-copy">
-                    <h3>
-                  <a
-                    href="https://taikai.network/cassinihackathons/hackathons/financial-world/projects/cl9zxduk0158717201vta2bk4ytg/idea"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >FarmSat: Space technologies for the rural world</a
-                  >
-                </h3>
-                <p class="entry-text">
-                  Project page for the FarmSat Cassini Hackathon entry using
-                  Copernicus data; Federico Lozano is listed on the UMA telecom
-                  team.
-                </p>
-                <p class="press-related">
-                  Related:
-                  <a href="awards.html">Cassini 4th Hackathon Winner</a>
-                </p>
-                  </div>
-                </div>
-              </div>
-            </article>
+            
 
-            <article class="press-item timeline-item">
+            <article class="press-item timeline-item" id="spin-off-coverage">
               <div class="timeline-aside">
                 <p class="timeline-period">Jul. 21, 2022</p>
                 <div class="timeline-logos">
@@ -1009,7 +1025,7 @@
                 rel="noopener noreferrer"
               >
                 <img
-                  src="https://estaticos-cdn.prensaiberica.es/clip/0901f9c7-3545-4663-9314-df2f48c1290a_16-9-discover-aspect-ratio_default_0.jpg"
+                  src="resources/press/spin-off-2022.webp"
                   alt=""
                   width="380"
                   height="285"
@@ -1033,7 +1049,7 @@
                 </p>
                 <p class="press-related">
                   Related:
-                  <a href="awards.html">Spin-Off Winner</a>
+                  <a href="awards.html#uma-spin-off">UMA Spin-Off entrepreneurship award</a>
                 </p>
                   </div>
                 </div>

@@ -1338,3 +1338,19 @@ main {
     max-width: 16rem;
   }
 }
+
+.meeting-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.meeting-panel h2 { margin-bottom: .5rem; }
+.research-item h3 a:hover { text-decoration: underline; }
+.research-item-copy { min-width: 0; }
+.publication-group { overflow-wrap: anywhere; }
+@media (max-width: 720px) {
+  .site-nav { flex-shrink: 1; }
+  .research-item-featured { grid-template-columns: minmax(0, 1fr); }
+}

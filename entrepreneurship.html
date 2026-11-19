@@ -7,142 +7,250 @@
     <title>Entrepreneurship | Federico Lozano-Cuadra</title>
     <meta name="description" content="Entrepreneurship and ventures by Federico Lozano-Cuadra." />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="navigation.js" defer></script>
+    <script src="constellations.js" defer></script>
   </head>
   <body>
-    <div class="ambient ambient-left" aria-hidden="true"></div>
-    <div class="ambient ambient-right" aria-hidden="true"></div>
 
     <div class="page-shell">
       <header class="site-header">
-        <nav class="site-nav" aria-label="Primary navigation">
-          <a href="index.html">Home</a>
-          <a href="index.html#research">Research</a>
-          <a href="index.html#publications">Publications</a>
+        <a class="wordmark" href="./" aria-label="Federico Lozano-Cuadra, home">Federico Lozano-Cuadra</a>
+        <button class="menu-switch" type="button" aria-controls="primary-links" aria-expanded="false" hidden>Menu <span aria-hidden="true">☰</span></button>
+        <nav class="site-nav" id="primary-links" aria-label="Primary navigation">
+          <a href="./">Home</a>
+          <a href="research/">Research</a>
           <a href="career.html">Career</a>
-          <a href="awards.html">Awards</a>
-          <a href="press.html">Press</a>
-          <a href="activities.html">Activities</a>
           <a href="entrepreneurship.html" aria-current="page">Entrepreneurship</a>
+          <a href="awards.html">Awards</a>
+          <a href="press.html">Events &amp; media</a>
+          <a href="book.html" class="nav-book">Book me</a>
         </nav>
       </header>
 
       <main>
         <section class="panel" id="entrepreneurship">
-          <div class="section-heading">
-            <p class="section-label">Entrepreneurship</p>
-            <h2>Ventures and initiatives</h2>
+          <header class="collection-head">
+            <div class="venture-brand"><img src="resources/logos/inst-blueberry-malaga.png" alt="" width="64" height="54"><h1>Blueberry Málaga</h1></div>
+            <a href="https://fedeloz.github.io/blueberry-malaga/">Project website <span aria-hidden="true">↗</span></a>
+          </header>
+          <p>
+            I founded Blueberry Malaga to teach young people AI, robotics, cybersecurity, and coding.
+            Over three years, we reached more than 1,000 students through programs with the
+            University of Malaga, Google Safety Engineering Center, OPPLUS, and regional schools.
+          </p>
+          <div class="story-links"><a href="awards.html#uma-spin-off">UMA Spin-Off award</a> <a href="awards.html#la-noria">La Noria finalist</a> <a href="press.html#blueberry-profile">Blueberry in El Español</a></div>
+          <div class="venture-photos">
+            <figure>
+              <a class="archive-photo " href="resources/events/opplus-class.webp" aria-label="Open photograph: A Blueberry instructor leads a family workshop at OPPLUS"><img src="resources/events/opplus-class.webp" width="800" height="533" alt="A Blueberry instructor leads a family workshop at OPPLUS" loading="lazy"></a>
+              <figcaption>
+              <a href="https://es.linkedin.com/posts/opplus_el-s%C3%A1bado-tuvo-lugar-la-tercera-sesi%C3%B3n-de-activity-7249343611195019264-3aoq">Teaching at OPPLUS’s Out Campus</a></figcaption>
+            </figure>
+            <figure>
+              <a class="archive-photo" href="resources/events/blueberry-cyber-girl-squad-google.webp"><img src="resources/events/blueberry-cyber-girl-squad-google.webp" width="1280" height="854" alt="A presenter addresses the Cyber Girl Squad audience at Google Málaga with the Blueberry logo projected above the stage." loading="lazy"></a>
+              <figcaption><a href="https://www.yeswetech.org/eventos/cybergirl-squad-1/resumen-cybergirl-squad-1/">Cyber Girl Squad at Google Málaga, co-organized by Blueberry and Yes We Tech</a></figcaption>
+            </figure>
           </div>
-          <div class="subsection-brand">
-            <img
-              class="subsection-logo"
-              src="resources/logos/inst-blueberry-malaga.png"
-              alt=""
-              width="32"
-              height="32"
-              decoding="async"
-            />
-            <div class="subsection-brand-copy">
-              <h3 class="subsection-title">Blueberry Malaga</h3>
-              <p class="entry-text">My own tech-education startup.</p>
-            </div>
-          </div>
-          <ul class="list-stack">
-            <li class="list-item">
-              <h3>1,000+ students reached</h3>
-              <p>
-                Programs in AI, robotics, cybersecurity, and coding delivered
-                over three years.
-              </p>
-            </li>
-            <li class="list-item">
-              <h3>Institutional partners</h3>
-              <p>
-                Collaborations with the University of Malaga, Google Safety
-                Engineering Center, OPPLUS, and regional schools.
-              </p>
-            </li>
-          </ul>
-          <div class="subsection-block">
-            <h4 class="subsection-block-title">Organized events</h4>
-            <div class="timeline">
-            <article class="timeline-item">
-              <p class="timeline-period">Nov. 15, 2025</p>
+        </section>
+        <section class="panel" aria-labelledby="blueberry-events">
+          <h2 class="subsection-block-title" id="blueberry-events">Organized events</h2>
+          <div class="timeline venture-events">
+            <article class="timeline-item venture-event" id="impact-robotics">
               <div class="entry-body">
-                <h3>Impact Workshop III: Robotics</h3>
-                <p class="entry-text">OPPLUS · 200 children and parents.</p>
+                <p class="timeline-period"><time datetime="2025-11-15">Nov. 15, 2025</time></p>
+                <h3>Impact Workshop III · Robotics</h3>
+                <p class="entry-org">OPPLUS Training Campus, Málaga</p>
+                <p class="entry-text">Children built robots that drew their own patterns using a battery, a motor, and felt-tip pens. RoboRescue UMA led the build at this family workshop. MART Formula Student and UMA Racing Team brought the motorsport demonstrations.</p>
+                <div class="story-links">
+                  <a href="https://es.linkedin.com/posts/ana-sanchez-trujillo_hoy-los-m%C3%A1s-peque%C3%B1os-han-vuelto-a-ser-los-activity-7395497959217565696-8P_q">Event photos</a>
+                  <a href="https://es.linkedin.com/posts/francisco-javier-aguayo-hern%C3%A1ndez-10a50b295_rob%C3%B3tica-stem-educaci%C3%B3n-activity-7397544375318294528-6wRo">RoboRescue’s workshop</a>
+                  <a href="https://www.instagram.com/mart__fs/p/DRKFwytirtp/">MART’s guest session</a>
+                </div>
               </div>
+              <a class="archive-photo venture-event-photo" href="resources/events/blueberry/impact-robotics.webp">
+                <img src="resources/events/blueberry/impact-robotics.webp" width="864" height="1152" alt="A presenter speaks to families at the OPPLUS robotics event." loading="lazy" decoding="async">
+              </a>
             </article>
-            <article class="timeline-item">
-              <p class="timeline-period">Nov. 22, 2024</p>
+            <article class="timeline-item venture-event" id="teleco4youth-ii">
               <div class="entry-body">
+                <p class="timeline-period"><time datetime="2024-11-22">Nov. 22, 2024</time></p>
                 <h3>Teleco4Youth II</h3>
-                <p class="entry-text">University of Malaga · Three tech workshops for 60 children.</p>
+                <p class="entry-org">School of Telecommunications Engineering, University of Málaga</p>
+                <p class="entry-text">Sixty students aged 12–15 tried cryptography, robotics, and electronics in three workshops we ran with Teleco Renta and the university. They wired circuits and programmed small vehicles to follow a track.</p>
+                <div class="story-links">
+                  <a href="https://www.instagram.com/blueberry_malaga/reel/DDe1tXFIkol/">Workshop video</a>
+                  <a href="https://www.instagram.com/blueberry_malaga/reel/DCe4x_Ro9Ei/">Blueberry’s announcement</a>
+                </div>
               </div>
+              <a class="archive-photo venture-event-photo" href="resources/events/blueberry/teleco4youth-ii.webp">
+                <img src="resources/events/blueberry/teleco4youth-ii.webp" width="360" height="640" alt="A Teleco4Youth participant works on the electronics of a small vehicle." loading="lazy" decoding="async">
+              </a>
             </article>
-            <article class="timeline-item">
-              <p class="timeline-period">Oct. 5, 2024</p>
+            <article class="timeline-item venture-event" id="impact-mechatronics">
               <div class="entry-body">
-                <h3>Impact Workshop II: Mechatronics</h3>
-                <p class="entry-text">OPPLUS Malaga · 150 children and parents.</p>
+                <p class="timeline-period"><time datetime="2024-10-05">Oct. 5, 2024</time></p>
+                <h3>Impact Workshop II · Mechatronics</h3>
+                <p class="entry-org">OPPLUS Training Campus, Málaga</p>
+                <p class="entry-text">More than 70 children joined us for a day of mechatronics. Blueberry introduced AI and 3D printing, and MART Formula Student showed families the electronics and mechanical systems behind a student-built race car.</p>
+                <div class="story-links">
+                  <a href="https://www.instagram.com/blueberry_malaga/p/DBebrrEoXw_/">Blueberry’s workshop photos</a>
+                  <a href="https://es.linkedin.com/posts/opplus_el-s%C3%A1bado-tuvo-lugar-la-tercera-sesi%C3%B3n-de-activity-7249343611195019264-3aoq">OPPLUS recap</a>
+                </div>
               </div>
+              <a class="archive-photo venture-event-photo" href="resources/events/blueberry/impact-mechatronics.webp">
+                <img src="resources/events/blueberry/impact-mechatronics.webp" width="576" height="576" alt="A Blueberry instructor leads the AI and 3D printing session at OPPLUS." loading="lazy" decoding="async">
+              </a>
             </article>
-            <article class="timeline-item">
-              <p class="timeline-period">Sep. 13, 2024</p>
+            <article class="timeline-item venture-event" id="cyber-girl-squad-iii">
               <div class="entry-body">
+                <p class="timeline-period"><time datetime="2024-09-13">Sept. 13, 2024</time></p>
                 <h3>Cyber Girl Squad III</h3>
-                <p class="entry-text">Google Safety Engineering Center (GSEC) Malaga · 102 girls.</p>
+                <p class="entry-org">Google Safety Engineering Center, Málaga</p>
+                <p class="entry-text">Working with Yes We Tech, 30 mentors guided 102 girls through cybersecurity challenges. Teams solved encrypted clues in a digital escape room, tried to spot cloned voices, and investigated a simulated ransomware incident.</p>
+                <div class="story-links">
+                  <a href="https://www.instagram.com/blueberry_malaga/reel/C_5Lg3-o5yH/">Blueberry’s event video</a>
+                  <a href="https://www.yeswetech.org/eventos/cybergirl-squad-3/resumen-cybergirl-squad-3/">Yes We Tech photo gallery</a>
+                </div>
               </div>
+              <a class="archive-photo venture-event-photo" href="resources/events/blueberry/cyber-girl-squad-iii.webp">
+                <img src="resources/events/blueberry/cyber-girl-squad-iii.webp" width="1152" height="768" alt="Participants work together at a table during the third Cyber Girl Squad at Google Málaga." loading="lazy" decoding="async">
+              </a>
             </article>
-            <article class="timeline-item">
-              <p class="timeline-period">Summer 2024</p>
+            <article class="timeline-item venture-event" id="summer-tech-camp">
               <div class="entry-body">
-                <h3>AI, Coding, and Cybersecurity Summer Camps</h3>
-                <p class="entry-text">OPPLUS Malaga · Three weeks for 40 children.</p>
+                <p class="timeline-period"><time datetime="2024-07-15">July 15</time> – <time datetime="2024-09-06">Sept. 6, 2024</time></p>
+                <h3>Summer Tech Camp</h3>
+                <p class="entry-org">OPPLUS Training Campus, Málaga</p>
+                <p class="entry-text">Forty children joined three week-long camps. The July sessions focused on artificial intelligence and Python programming. In September the campers returned for a week of cybersecurity.</p>
+                <div class="story-links">
+                  <a href="https://www.linkedin.com/posts/blueberry-malaga_%F0%9D%97%A6%F0%9D%97%B2-%F0%9D%97%AE%F0%9D%97%B0%F0%9D%97%AE%F0%9D%97%AF%F0%9D%97%BC-%F0%9D%97%B2%F0%9D%97%B9-%F0%9D%98%83%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%BC-%F0%9D%97%BD%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%BC-activity-7247905781520449536-8gr2">Blueberry’s summer recap</a>
+                  <a href="https://es.linkedin.com/posts/opplus_summercampustech-activity-7229038976496541697-ixKY">OPPLUS camp photos</a>
+                </div>
               </div>
+              <a class="archive-photo venture-event-photo" href="resources/events/blueberry/summer-tech-camp.webp">
+                <img src="resources/events/blueberry/summer-tech-camp.webp" width="800" height="533" alt="A camper works on a computer during the OPPLUS Summer Tech Camp." loading="lazy" decoding="async">
+              </a>
             </article>
-            <article class="timeline-item">
-              <p class="timeline-period">Jun. 25–27, 2024</p>
+            <article class="timeline-item venture-event" id="junior-makers">
               <div class="entry-body">
-                <h3>Junior Makers</h3>
-                <p class="entry-text">University of Malaga · Three-day tech camp for 53 children.</p>
+                <p class="timeline-period"><time datetime="2024-06-25">June 25</time>–<time datetime="2024-06-27">27, 2024</time></p>
+                <h3>Junior Makers · Construyendo la Ciudad Eureka</h3>
+                <p class="entry-org">The Green Ray, University of Málaga</p>
+                <p class="entry-text">Over three days, 53 children aged 9–12 built a miniature smart city. They decoded binary and ASCII messages and wired Arduino circuits to bring their model homes to life.</p>
+                <div class="story-links">
+                  <a href="https://www.instagram.com/blueberry_malaga/reel/C9iLBVEIm-5/">See the model homes</a>
+                  <a href="https://luma.com/kyit239x">Event program</a>
+                </div>
               </div>
+              <a class="archive-photo venture-event-photo" href="resources/events/blueberry/junior-makers.webp">
+                <img src="resources/events/blueberry/junior-makers.webp" width="648" height="1152" alt="The model homes built by the Junior Makers teams, arranged as a miniature city." loading="lazy" decoding="async">
+              </a>
             </article>
-            <article class="timeline-item">
-              <p class="timeline-period">Jun. 14, 2024</p>
+            <article class="timeline-item venture-event" id="teleco4youth-i">
               <div class="entry-body">
+                <p class="timeline-period"><time datetime="2024-06-14">June 14, 2024</time></p>
                 <h3>Teleco4Youth I</h3>
-                <p class="entry-text">University of Malaga · Four tech workshops for 113 children.</p>
+                <p class="entry-org">School of Telecommunications Engineering, University of Málaga</p>
+                <p class="entry-text">At the first Teleco4Youth, 113 students aged 12–15 spent the afternoon with Blueberry and Teleco Renta. They rotated between cybersecurity, artificial intelligence, electronics, and programming workshops.</p>
+                <div class="story-links">
+                  <a href="https://www.instagram.com/blueberry_malaga/reel/C8Z_g-Yo6jx/">Blueberry’s event video</a>
+                  <a href="https://www.linkedin.com/posts/blueberry-malaga_%F0%9D%97%A6%F0%9D%97%B2-%F0%9D%97%AE%F0%9D%97%B0%F0%9D%97%AE%F0%9D%97%AF%F0%9D%97%BC-%F0%9D%97%B2%F0%9D%97%B9-%F0%9D%98%83%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%BC-%F0%9D%97%BD%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%BC-activity-7247905781520449536-8gr2">Blueberry on LinkedIn</a>
+                </div>
               </div>
+              <a class="archive-photo venture-event-photo" href="resources/events/blueberry/teleco4youth-i.webp">
+                <img src="resources/events/blueberry/teleco4youth-i.webp" width="648" height="1152" alt="A Blueberry instructor leads a workshop at a university electronics bench during the first Teleco4Youth." loading="lazy" decoding="async">
+              </a>
             </article>
-            <article class="timeline-item">
-              <p class="timeline-period">May 24, 2024</p>
+            <article class="timeline-item venture-event" id="la-asuncion-2024">
               <div class="entry-body">
-                <h3>Cyber Girl Squad I</h3>
-                <p class="entry-text">Google Safety Engineering Center (GSEC) Malaga · More than 110 girls.</p>
+                <p class="timeline-period"><time datetime="2024-06-10">June 10, 2024</time></p>
+                <h3>Student project showcase</h3>
+                <p class="entry-org">Colegio de La Asunción, Málaga</p>
+                <p class="entry-text">Our students demonstrated the projects they built during the school year. One team presented its website, and two siblings showed a game they had written together, The Warlock’s Odyssey.</p>
+                <div class="story-links">
+                  <a href="https://www.instagram.com/blueberry_malaga/reel/C-VuTtGtLhm/">Student game demo</a>
+                  <a href="https://es.linkedin.com/posts/luishgcom_pod%C3%A9is-creer-que-este-juego-lo-hayan-montado-activity-7206228047472005120-qAL9">Showcase photos</a>
+                </div>
               </div>
+              <a class="archive-photo venture-event-photo" href="resources/events/blueberry/la-asuncion-2024.webp">
+                <img src="resources/events/blueberry/la-asuncion-2024.webp" width="800" height="427" alt="Blueberry students present a website to their classmates at Colegio de La Asunción." loading="lazy" decoding="async">
+              </a>
             </article>
-            <article class="timeline-item">
-              <p class="timeline-period">Apr. 18, 2024</p>
+            <article class="timeline-item venture-event" id="cyber-girl-squad-ii">
               <div class="entry-body">
+                <p class="timeline-period"><time datetime="2024-05-24">May 24, 2024</time></p>
                 <h3>Cyber Girl Squad II</h3>
-                <p class="entry-text">University of Bilbao · 110 girls.</p>
+                <p class="entry-org">Google Safety Engineering Center, Málaga</p>
+                <p class="entry-text">Around 100 girls aged 12–15 explored how attackers manipulate people, how ethical hackers test systems, and how to write Python. The workshops were part of our second Cyber Girl Squad with Yes We Tech.</p>
+                <div class="story-links">
+                  <a href="https://www.instagram.com/blueberry_malaga/reel/C8E0s0FI0Fg/">Participant interviews</a>
+                  <a href="https://www.yeswetech.org/eventos/cybergirl-squad-2/resumen-cybergirl-squad-2/">Event photos by Uve MTZ</a>
+                </div>
               </div>
+              <a class="archive-photo venture-event-photo" href="resources/events/blueberry/cyber-girl-squad-ii.webp">
+                <img src="resources/events/blueberry/cyber-girl-squad-ii.webp" width="1152" height="769" alt="A Blueberry presenter addresses the group during Cyber Girl Squad II at Google Málaga." loading="lazy" decoding="async">
+              </a>
             </article>
-            <article class="timeline-item">
-              <p class="timeline-period">Feb. 9, 2024</p>
+            <article class="timeline-item venture-event" id="teleko-innova-bilbao">
               <div class="entry-body">
-                <h3>Telekko Innova</h3>
-                <p class="entry-text">Google Safety Engineering Center (GSEC) Malaga · More than 100 children and bachelor students.</p>
+                <p class="timeline-period"><time datetime="2024-04-18">Apr. 18, 2024</time></p>
+                <h3>Teleko Innova</h3>
+                <p class="entry-org">Bilbao School of Engineering, University of the Basque Country (UPV/EHU), Bilbao</p>
+                <p class="entry-text">Blueberry and Teleco Renta organized a morning of four hands-on telecommunications workshops. University engineering students helped mentor the secondary-school participants. More than 100 people took part.</p>
+                <div class="story-links">
+                  <a href="https://www.instagram.com/blueberry_malaga/reel/DELP3wwoS5D/">Bilbao in Blueberry’s recap (0:27)</a>
+                  <a href="resources/events/blueberry/teleko-innova-poster.webp">Event poster</a>
+                  <a href="https://es.linkedin.com/posts/blueberry-malaga_bilbao-blueberryers-tecnolog%C3%ADa-activity-7187060307939213312-PJbe">Blueberry on LinkedIn</a>
+                </div>
               </div>
+              <a class="archive-photo venture-event-photo" href="resources/events/blueberry/teleko-innova-bilbao.webp">
+                <img src="resources/events/blueberry/teleko-innova-bilbao.webp" width="648" height="1152" alt="The Teleko Innova title is projected above the audience at the Bilbao School of Engineering." loading="lazy" decoding="async">
+              </a>
             </article>
-            <article class="timeline-item">
-              <p class="timeline-period">Nov. 4, 2023</p>
+            <article class="timeline-item venture-event" id="cyber-girl-squad-i">
               <div class="entry-body">
-                <h3>Impact Workshop I: AI</h3>
-                <p class="entry-text">OPPLUS Malaga · 300 children and parents.</p>
+                <p class="timeline-period"><time datetime="2024-02-09">Feb. 9, 2024</time></p>
+                <h3>Cyber Girl Squad I</h3>
+                <p class="entry-org">Google Safety Engineering Center, Málaga</p>
+                <p class="entry-text">For our first edition with Yes We Tech, 100 girls aged 12–15 met women working in cybersecurity and tried their tools. Workshops included writing Python, recognizing cloned voices, and responding to malware.</p>
+                <div class="story-links">
+                  <a href="https://es.linkedin.com/posts/blueberry-malaga_blueberryers-womenintech-genderequalityintech-activity-7158410945604599808-QHCC">Blueberry’s announcement</a>
+                  <a href="https://www.yeswetech.org/eventos/cybergirl-squad-1/resumen-cybergirl-squad-1/">Yes We Tech photo gallery</a>
+                </div>
               </div>
+              <a class="archive-photo venture-event-photo" href="resources/events/blueberry/cyber-girl-squad-i.webp">
+                <img src="resources/events/blueberry/cyber-girl-squad-i.webp" width="1152" height="769" alt="A Blueberry instructor in a white team shirt leads a group at the first Cyber Girl Squad." loading="lazy" decoding="async">
+              </a>
             </article>
-          </div>
+            <article class="timeline-item venture-event" id="impact-artificial-intelligence">
+              <div class="entry-body">
+                <p class="timeline-period"><time datetime="2023-11-04">Nov. 4, 2023</time></p>
+                <h3>Impact Workshop I · Artificial intelligence</h3>
+                <p class="entry-org">OPPLUS Training Campus, Málaga</p>
+                <p class="entry-text">Families signed up 170 children aged 6–17 in less than a day. The children created an AI art mural, tried to tell real news from AI-generated fakes, and built websites. Parents had a parallel session for their own questions about AI.</p>
+                <div class="story-links">
+                  <a href="https://es.linkedin.com/posts/blueberry-malaga_el-pasado-4-de-noviembre-organizamos-el-mayor-activity-7130858996365701120-RZE8">Blueberry’s workshop recap</a>
+                  <a href="https://es.linkedin.com/posts/opplus_el-s%C3%A1bado-fue-un-d%C3%ADa-de-aprendizaje-y-descubrimiento-activity-7127237948739063808-9Uam">OPPLUS event photos</a>
+                </div>
+              </div>
+              <a class="archive-photo venture-event-photo" href="resources/events/blueberry/impact-artificial-intelligence.webp">
+                <img src="resources/events/blueberry/impact-artificial-intelligence.webp" width="800" height="533" alt="Blueberry instructors work with children at the first OPPLUS family workshop." loading="lazy" decoding="async">
+              </a>
+            </article>
+            <article class="timeline-item venture-event" id="la-asuncion-2023">
+              <div class="entry-body">
+                <p class="timeline-period"><time datetime="2023-05-31">May 31, 2023</time></p>
+                <h3>Student project showcase</h3>
+                <p class="entry-org">Colegio de La Asunción, Málaga</p>
+                <p class="entry-text">Students presented their final projects in the school’s Bachillerato building, including a working robot. The afternoon ended with awards for the winning projects.</p>
+                <div class="story-links">
+                  <a href="resources/events/blueberry/la-asuncion-2023-poster.webp">Blueberry’s event poster</a>
+                </div>
+              </div>
+              <a class="archive-photo venture-event-photo" href="resources/events/blueberry/la-asuncion-2023.webp">
+                <img src="resources/events/blueberry/la-asuncion-2023.webp" width="768" height="1152" alt="A student robotics project from Blueberry’s 2023 showcase at Colegio de La Asunción." loading="lazy" decoding="async">
+              </a>
+            </article>
           </div>
         </section>
       </main>

@@ -1,30 +1,94 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Research · Federico Lozano-Cuadra</title>
-  <meta name="description" content="Projects and publications on satellite routing and lunar rover exploration by Federico Lozano-Cuadra and collaborators.">
-  <link rel="icon" href="../resources/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles.css?v=compact-repo">
-  <link rel="stylesheet" href="research.css?v=publication-cards">
-</head>
-<body>
-  <header class="masthead">
-    <a class="name" href="../">Federico Lozano-Cuadra</a>
-    <nav aria-label="On this page"><a href="#projects">Projects</a><a href="#publications">Publications</a></nav>
-  </header>
-  <main>
-    <h1 class="sr-only">Research projects and publications</h1>
-    <section id="projects" aria-label="Projects">
-      <h2>Satellite networks</h2>
-      <div class="projects satellite">
-        <div class="satellite-project">
-          <a class="project" href="tcom/">
-            <img class="frame" src="tcom/assets/poster.jpg?v=kepler" alt="The Málaga–Los Angeles route across a moving Kepler constellation, with latency and hop-count traces." width="1440" height="900">
-            <h3>Decentralized satellite routing <span aria-hidden="true">↗</span></h3>
-            <p>Satellites learn where to forward each packet using feedback from their neighbors.</p>
-          </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../resources/favicon.svg" type="image/svg+xml" />
+    <title>Research | Federico Lozano-Cuadra</title>
+    <meta name="description" content="Research projects and publications on lunar rover teams and satellite networks." />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../portfolio.css">
+    <script src="../navigation.js" defer></script>
+    <script src="../constellations.js" defer></script>
+  </head>
+  <body>
+
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="wordmark" href="../" aria-label="Federico Lozano-Cuadra, home">Federico Lozano-Cuadra</a>
+        <button class="menu-switch" type="button" aria-controls="primary-links" aria-expanded="false" hidden>Menu <span aria-hidden="true">☰</span></button>
+        <nav class="site-nav" id="primary-links" aria-label="Primary navigation">
+          <a href="../">Home</a>
+          <a href="../research/" aria-current="page">Research</a>
+          <a href="../career.html">Career</a>
+          <a href="../entrepreneurship.html">Entrepreneurship</a>
+          <a href="../awards.html">Awards</a>
+          <a href="../press.html">Events &amp; media</a>
+          <a href="../book.html" class="nav-book">Book me</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="panel" id="projects">
+          <div class="section-heading-top section-heading">
+            <h1 class="section-label">Research projects</h1>
+            <a class="section-heading-link" href="#publications">Publication list ↓</a>
+          </div>
+          <div class="research-stack">
+            <article class="research-item research-item-featured">
+              <div class="research-item-copy">
+                <h3><a href="gatmarl/">Mission-aware communications for lunar rover swarms</a></h3>
+                <p>
+                  Rovers exploring beyond the lander’s radio range need other rovers to relay
+                  their observations. GAT-MARL uses graph attention and multi-agent reinforcement learning
+                  to choose the next relay from local information in a delay-tolerant network. Rovers prioritize observations that matter most to
+                  the mission, and idle rovers can help reconnect the team. In simulations,
+                  five rovers using this approach reported about as much of the terrain to the
+                  lander as fifteen using the strongest classical routing baseline.
+                  With NASA Jet Propulsion Laboratory and Johns Hopkins University ACE Lab.
+                </p>
+                <div><a class="publication-link project-website" href="gatmarl/"><img src="../resources/logos/web-globe.svg" width="16" height="16" alt="">Project website</a></div>
+              </div>
+              <figure class="project-figure">
+                <a class="figure-stage" href="gatmarl/">
+                  <img src="gatmarl/assets/poster.jpg" width="1920" height="1080" alt="Rovers relay observations through local links to the lander." loading="lazy">
+                </a>
+              </figure>
+            </article>
+            <article class="research-item research-item-featured">
+              <div class="research-item-copy">
+                <h3><a href="fms/">Lunar exploration with vision-language models</a></h3>
+                <p>
+                  Each rover uses a vision-language model to interpret its camera observations,
+                  remember what it has seen, and decide where to move and what to transmit. The
+                  team’s objective is to reconstruct a map at the base station despite
+                  intermittent contact. In simulations, the approach improved packet delivery
+                  ratio by up to 30.6% and exploration coverage by up to 8.3% over the
+                  strongest baseline. This work involved NASA JPL and the Johns Hopkins
+                  University ACE Lab.
+                </p>
+                <div><a class="publication-link project-website" href="fms/"><img src="../resources/logos/web-globe.svg" width="16" height="16" alt="">Project website</a></div>
+              </div>
+              <figure class="project-figure">
+                <a class="figure-stage" href="fms/">
+                  <img src="fms/assets/poster.jpg" width="1920" height="1080" alt="Vision-language planning and safety checks for the exploring rover team." loading="lazy">
+                </a>
+              </figure>
+            </article>
+            <article class="research-item research-item-featured">
+              <div class="research-item-copy">
+                <h3><a href="tcom/">Multi-agent deep reinforcement learning for distributed satellite routing</a></h3>
+                <p>
+                  Each satellite chooses the next hop for a packet using feedback from its
+                  neighbors. A shared model is trained offline, then adapted in orbit as
+                  traffic and links change. Satellites can pass a model to the next spacecraft
+                  along an orbital track and combine updates through federated learning. In
+                  simulations, routing matched centralized shortest-path performance under
+                  light traffic and shifted packets toward less congested links as traffic
+                  grew. An open-source simulator supports training, evaluation, and
+                  comparison of routing policies in dynamic satellite topologies.
+                </p>
+                <div><a class="publication-link project-website" href="tcom/"><img src="../resources/logos/web-globe.svg" width="16" height="16" alt="">Project website</a></div>
           <a class="research-repo-card" href="https://github.com/SatCom-TELMA/MA-DRL_Routing_Simulator" rel="noopener noreferrer" target="_blank">
             <img alt="" class="research-repo-card-logo" decoding="async" height="24" src="tcom/assets/github-mark.svg" width="24"/>
             <span class="research-repo-card-body">
@@ -42,211 +106,213 @@
               </span>
             </span>
           </a>
-        </div>
-        <a class="project" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sat.70086">
-          <div class="plots">
-            <img src="shortest-path.webp" alt="Shortest paths from a source to multiple destinations in the mesh." width="1280" height="606">
-            <img src="steiner-tree.webp" alt="The same destinations connected by a shared Steiner tree." width="1280" height="606">
+              </div>
+              <figure class="project-figure">
+                <a class="figure-stage" href="tcom/">
+                  <img src="figures/satellite-routing.gif" width="640" height="360" alt="Animated simulation of packet routing through a satellite constellation." loading="lazy" decoding="async">
+                </a>
+              </figure>
+            </article>
+            <article class="research-item research-item-featured">
+              <div class="research-item-copy">
+                <h3><a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sat.70086">Multicast routing and downlink allocation</a></h3>
+                <p>
+                  A video stream or flood alert may need to reach many ground users through the
+                  same LEO constellation. The method builds a shared distribution tree across
+                  inter-satellite links, then allocates downlink capacity according to demand
+                  from individual users and multicast groups. In simulations, the tree carried
+                  the same traffic with as little as one-third of the link load of separate
+                  shortest paths, at the cost of a moderate increase in delay.
+                </p>
+                <div><a class="publication-link" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sat.70086">Read the paper ↗</a></div>
+              </div>
+              <figure class="project-figure">
+                <div class="figure-stage">
+                  <div class="route-pair">
+                    <div><span>Shortest paths</span><img src="shortest-path.webp" width="1280" height="606" alt="Separate routes from one source to several destination satellites." loading="lazy"></div>
+                    <div><span>Steiner tree</span><img src="steiner-tree.webp" width="1280" height="606" alt="A multicast tree shares links among the same destinations." loading="lazy"></div>
+                  </div>
+                </div>
+              </figure>
+            </article>
           </div>
-          <h3>Multicast routing and downlink allocation <span aria-hidden="true">↗</span></h3>
-          <p>Routing the same data to several destinations over shared satellite links.</p>
-        </a>
-      </div>
-      <h2>Lunar rover teams</h2>
-      <div class="projects lunar">
-        <a class="project" href="gatmarl/">
-          <img class="frame" src="gatmarl/assets/poster.jpg" alt="GAT-MARL takeaway showing the rover swarm, lander, and local relay links." width="1920" height="1080" loading="lazy">
-          <h3>Mission-aware rover communications <span aria-hidden="true">↗</span></h3>
-          <p>GAT-MARL learns which rover should relay an observation on its way back to the lander.</p>
-        </a>
-        <a class="project" href="fms/">
-          <img class="frame" src="fms/assets/poster.jpg" alt="Vision-language exploration takeaway showing the rover team and its planning and safety checks." width="1920" height="1080" loading="lazy">
-          <h3>Exploration with vision-language models <span aria-hidden="true">↗</span></h3>
-          <p>Rovers use camera observations to plan their next move and decide what to share.</p>
-        </a>
-      </div>
-    </section>
-    <section aria-label="Publications" class="panel" id="publications">
-      <div class="section-heading">
-        <div class="section-heading-top">
-          <p class="section-label">Publications</p>
-          <a aria-label="Google Scholar profile" class="section-heading-link section-heading-link-icon-only" href="https://scholar.google.com/citations?user=6PZm2aYAAAAJ" rel="noopener noreferrer" target="_blank" title="Google Scholar profile">
-            <img alt="" decoding="async" height="16" src="../resources/logos/google-scholar.svg" width="16"/>
-          </a>
+        </section>
+        <section aria-label="Publications" class="panel" id="publications">
+          <div class="section-heading">
+            <div class="section-heading-top">
+              <p class="section-label">Publications</p>
+              <div class="publication-profiles" role="group" aria-label="Author profiles">
+                <a aria-label="Google Scholar profile" class="publication-link publication-link-icon-only" data-kind="scholar" href="https://scholar.google.com/citations?user=6PZm2aYAAAAJ" rel="noopener noreferrer" target="_blank" title="Google Scholar profile"><span aria-hidden="true" class="publication-link-icon">
+<img alt="" class="publication-link-logo" decoding="async" height="16" src="../resources/logos/google-scholar.svg" width="16"/>
+</span></a>
+                <a aria-label="IEEE author search" class="publication-link publication-link-icon-only" data-kind="ieee" href="https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&amp;queryText=Federico%20Lozano-Cuadra" rel="noopener noreferrer" target="_blank" title="IEEE author search"><span aria-hidden="true" class="publication-link-icon">
+<span class="publication-link-mark">IEEE</span>
+</span></a>
+                <a aria-label="ORCID profile" class="publication-link publication-link-icon-only" data-kind="orcid" href="https://orcid.org/0009-0001-6238-1369" rel="noopener noreferrer" target="_blank" title="ORCID profile"><span aria-hidden="true" class="publication-link-icon"><svg aria-hidden="true" class="social-icon" viewbox="0 0 24 24">
+<circle cx="12" cy="12" fill="none" r="11" stroke="currentColor" stroke-width="2"></circle>
+<text text-anchor="middle" x="12" y="15.2">iD</text>
+</svg></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="publication-groups">
+            <section aria-labelledby="publications-journals" class="publication-group">
+              <h3 class="subsection-title" id="publications-journals">Journals</h3>
+              <ul class="list-stack">
+                <li class="list-item">
+                  <h3>Continual deep reinforcement learning for decentralized satellite routing</h3>
+                  <p> <span class="author-self">F. Lozano-Cuadra</span>, B. Soret, I. Leyva-Mayorga, and P. Popovski. <em>IEEE Transactions on Communications</em>, 2025. DOI: 10.1109/TCOMM.2025.3562522. </p>
+                  <div aria-label="Publication links" class="publication-links">
+                    <a aria-label="IEEE Xplore" class="publication-link publication-link-icon-only" data-kind="ieee" href="https://doi.org/10.1109/TCOMM.2025.3562522" rel="noopener noreferrer" target="_blank" title="IEEE Xplore"><span aria-hidden="true" class="publication-link-icon">
+<span class="publication-link-mark">IEEE</span>
+</span></a>
+                    <a aria-label="Google Scholar" class="publication-link publication-link-icon-only" data-kind="scholar" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=6PZm2aYAAAAJ&amp;citation_for_view=6PZm2aYAAAAJ:d1gkVwhDpl0C" rel="noopener noreferrer" target="_blank" title="Google Scholar"><span aria-hidden="true" class="publication-link-icon">
+<img alt="" class="publication-link-logo" decoding="async" height="16" src="../resources/logos/google-scholar.svg" width="16"/>
+</span></a>
+                    <a aria-label="arXiv" class="publication-link publication-link-icon-only" data-kind="arxiv" href="https://arxiv.org/abs/2405.12308" rel="noopener noreferrer" target="_blank" title="arXiv"><span aria-hidden="true" class="publication-link-icon">
+<span class="publication-link-mark">arXiv</span>
+</span></a>
+                    <a class="publication-link project-website" href="tcom/"><img src="../resources/logos/web-globe.svg" width="16" height="16" alt="">Project website</a>
+                  </div>
+                </li>
+                <li class="list-item">
+                  <h3> Routing and downlink resource allocation for multicast traffic in LEO satellite constellations </h3>
+                  <p> <span class="author-self">F. Lozano-Cuadra</span>, I. Leyva-Mayorga, J. J. Nielsen, and B. Soret. <em>International Journal of Satellite Communications and Networking</em>, 2026. DOI: 10.1002/sat.70086. </p>
+                  <div aria-label="Publication links" class="publication-links">
+                    <a aria-label="Wiley Online Library" class="publication-link publication-link-icon-only" data-kind="wiley" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sat.70086" rel="noopener noreferrer" target="_blank" title="Wiley Online Library"><span aria-hidden="true" class="publication-link-icon">
+<span class="publication-link-mark">Wiley</span>
+</span></a>
+                    <a aria-label="Google Scholar" class="publication-link publication-link-icon-only" data-kind="scholar" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=es&amp;user=6PZm2aYAAAAJ&amp;citation_for_view=6PZm2aYAAAAJ:UeHWp8X0CEIC" rel="noopener noreferrer" target="_blank" title="Google Scholar"><span aria-hidden="true" class="publication-link-icon">
+<img alt="" class="publication-link-logo" decoding="async" height="16" src="../resources/logos/google-scholar.svg" width="16"/>
+</span></a>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section aria-labelledby="publications-conferences" class="publication-group">
+              <h3 class="subsection-title" id="publications-conferences">Conferences</h3>
+              <ul class="list-stack">
+                <li class="list-item">
+                  <h3> Learning decentralized routing policies via graph attention-based multi-agent reinforcement learning in lunar delay-tolerant networks </h3>
+                  <p> <span class="author-self">F. Lozano-Cuadra</span>, B. Soret, M. Sanchez Net, A. Cauligi, and F. Rossi. Accepted for presentation at the <em>International Symposium on Planetary Robotics (iSpaRo)</em>, Sendai, Japan, 2025. </p>
+                  <div aria-label="Publication links" class="publication-links">
+                    <a aria-label="IEEE Xplore" class="publication-link publication-link-icon-only" data-kind="ieee" href="https://ieeexplore.ieee.org/document/11437303" rel="noopener noreferrer" target="_blank" title="IEEE Xplore"><span aria-hidden="true" class="publication-link-icon">
+<span class="publication-link-mark">IEEE</span>
+</span></a>
+                    <a aria-label="Google Scholar" class="publication-link publication-link-icon-only" data-kind="scholar" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=6PZm2aYAAAAJ&amp;citation_for_view=6PZm2aYAAAAJ:qjMakFHDy7sC" rel="noopener noreferrer" target="_blank" title="Google Scholar"><span aria-hidden="true" class="publication-link-icon">
+<img alt="" class="publication-link-logo" decoding="async" height="16" src="../resources/logos/google-scholar.svg" width="16"/>
+</span></a>
+                    <a aria-label="arXiv" class="publication-link publication-link-icon-only" data-kind="arxiv" href="https://arxiv.org/abs/2510.20436" rel="noopener noreferrer" target="_blank" title="arXiv"><span aria-hidden="true" class="publication-link-icon">
+<span class="publication-link-mark">arXiv</span>
+</span></a>
+                    <a class="publication-link project-website" href="gatmarl/"><img src="../resources/logos/web-globe.svg" width="16" height="16" alt="">Project website</a>
+                  </div>
+                </li>
+                <li class="list-item">
+                  <h3> An open source multi-agent deep reinforcement learning routing simulator for satellite networks </h3>
+                  <p> <span class="author-self">F. Lozano-Cuadra</span>, M. Thorsager, I. Leyva-Mayorga, and B. Soret. In <em>Proceedings of SPAICE2024: The First Joint European Space Agency / IAA Conference on AI in and for Space</em>, pp. 420-424, Sep. 17-19, 2024, ESA European Centre for Space Applications and Telecommunications (ECSAT), Oxford, UK. DOI: 10.5281/zenodo.13885645. </p>
+                  <div aria-label="Publication links" class="publication-links">
+                    <a aria-label="Zenodo" class="publication-link publication-link-icon-only" data-kind="doi" href="https://doi.org/10.5281/zenodo.13885645" rel="noopener noreferrer" target="_blank" title="Zenodo"><span aria-hidden="true" class="publication-link-icon">
+<span class="publication-link-mark">DOI</span>
+</span></a>
+                    <a aria-label="Google Scholar" class="publication-link publication-link-icon-only" data-kind="scholar" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=6PZm2aYAAAAJ&amp;citation_for_view=6PZm2aYAAAAJ:9yKSN-GCB0IC" rel="noopener noreferrer" target="_blank" title="Google Scholar"><span aria-hidden="true" class="publication-link-icon">
+<img alt="" class="publication-link-logo" decoding="async" height="16" src="../resources/logos/google-scholar.svg" width="16"/>
+</span></a>
+                    <a aria-label="arXiv" class="publication-link publication-link-icon-only" data-kind="arxiv" href="https://arxiv.org/abs/2407.11047" rel="noopener noreferrer" target="_blank" title="arXiv"><span aria-hidden="true" class="publication-link-icon">
+<span class="publication-link-mark">arXiv</span>
+</span></a>
+                    <a aria-label="GitHub" class="publication-link publication-link-icon-only" data-kind="github" href="https://github.com/SatCom-TELMA/MA-DRL_Routing_Simulator" rel="noopener noreferrer" target="_blank" title="GitHub"><span aria-hidden="true" class="publication-link-icon">
+<svg viewbox="0 0 24 24">
+<path d="M12 0C5.37 0 0 5.37 0 12a12 12 0 0 0 8.2 11.38c.6.11.82-.26.82-.58 0-.29-.01-1.04-.01-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.33-1.75-1.33-1.75-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.8 1.31 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.18 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 6.8c1.02 0 2.05.14 3.01.41 2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.76.84 1.23 1.91 1.23 3.22 0 4.62-2.81 5.64-5.49 5.94.43.37.82 1.1.82 2.23 0 1.61-.01 2.91-.01 3.31 0 .32.22.69.82.58A12 12 0 0 0 24 12C24 5.37 18.63 0 12 0Z"></path>
+</svg>
+</span></a>
+                    <a class="publication-link project-website" href="tcom/"><img src="../resources/logos/web-globe.svg" width="16" height="16" alt="">Project website</a>
+                  </div>
+                </li>
+                <li class="list-item" id="icmlcn-madrl">
+                  <h3>Multi-Agent Deep Reinforcement Learning for Distributed Satellite Routing</h3>
+                  <p> <span class="author-self">F. Lozano-Cuadra</span> and B. Soret. In <em>2024 IEEE International Conference on Machine Learning for Communication and Networking (ICMLCN)</em>, Stockholm, Sweden, 2024, pp. 1-2. DOI: 10.1109/ICMLCN59089.2024.10624767. </p>
+                  <div aria-label="Publication links" class="publication-links">
+                    <a aria-label="IEEE Xplore" class="publication-link publication-link-icon-only" data-kind="ieee" href="https://doi.org/10.1109/ICMLCN59089.2024.10624767" rel="noopener noreferrer" target="_blank" title="IEEE Xplore"><span aria-hidden="true" class="publication-link-icon">
+<span class="publication-link-mark">IEEE</span>
+</span></a>
+                    <a aria-label="Google Scholar" class="publication-link publication-link-icon-only" data-kind="scholar" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=6PZm2aYAAAAJ&amp;citation_for_view=6PZm2aYAAAAJ:u-x6o8ySG0sC" rel="noopener noreferrer" target="_blank" title="Google Scholar"><span aria-hidden="true" class="publication-link-icon">
+<img alt="" class="publication-link-logo" decoding="async" height="16" src="../resources/logos/google-scholar.svg" width="16"/>
+</span></a>
+                    <a aria-label="arXiv" class="publication-link publication-link-icon-only" data-kind="arxiv" href="https://arxiv.org/abs/2402.17666" rel="noopener noreferrer" target="_blank" title="arXiv"><span aria-hidden="true" class="publication-link-icon">
+<span class="publication-link-mark">arXiv</span>
+</span></a>
+                    <a class="publication-link project-website" href="tcom/"><img src="../resources/logos/web-globe.svg" width="16" height="16" alt="">Project website</a>
+                    <a aria-label="IEEE travel grant" class="publication-link publication-link-icon-only" data-kind="award" href="../awards.html#icmlcn-grant" title="IEEE travel grant"><span aria-hidden="true" class="publication-link-icon"><svg fill="none" stroke="currentColor" stroke-width="1.7" viewbox="0 0 24 24"><circle cx="12" cy="8" fill="none" r="5"></circle><path d="m8 12-2 9 6-3 6 3-2-9" fill="none"></path></svg></span></a>
+                  </div>
+                </li>
+                <li class="list-item" id="icmlcn-q-learning">
+                  <h3>Q-learning for distributed routing in LEO satellite constellations</h3>
+                  <p> B. Soret, I. Leyva-Mayorga, <span class="author-self">F. Lozano-Cuadra</span>, and M. D. Thorsager. In <em>2024 IEEE International Conference on Machine Learning for Communication and Networking (ICMLCN)</em>, Stockholm, Sweden, 2024, pp. 208-213. DOI: 10.1109/ICMLCN59089.2024.10624807. </p>
+                  <div aria-label="Publication links" class="publication-links">
+                    <a aria-label="IEEE Xplore" class="publication-link publication-link-icon-only" data-kind="ieee" href="https://doi.org/10.1109/ICMLCN59089.2024.10624807" rel="noopener noreferrer" target="_blank" title="IEEE Xplore"><span aria-hidden="true" class="publication-link-icon">
+<span class="publication-link-mark">IEEE</span>
+</span></a>
+                    <a aria-label="Google Scholar" class="publication-link publication-link-icon-only" data-kind="scholar" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=6PZm2aYAAAAJ&amp;citation_for_view=6PZm2aYAAAAJ:u5HHmVD_uO8C" rel="noopener noreferrer" target="_blank" title="Google Scholar"><span aria-hidden="true" class="publication-link-icon">
+<img alt="" class="publication-link-logo" decoding="async" height="16" src="../resources/logos/google-scholar.svg" width="16"/>
+</span></a>
+                    <a aria-label="arXiv" class="publication-link publication-link-icon-only" data-kind="arxiv" href="https://arxiv.org/abs/2306.01346" rel="noopener noreferrer" target="_blank" title="arXiv"><span aria-hidden="true" class="publication-link-icon">
+<span class="publication-link-mark">arXiv</span>
+</span></a>
+                    <a class="publication-link project-website" href="tcom/"><img src="../resources/logos/web-globe.svg" width="16" height="16" alt="">Project website</a>
+                    <a aria-label="IEEE travel grant" class="publication-link publication-link-icon-only" data-kind="award" href="../awards.html#icmlcn-grant" title="IEEE travel grant"><span aria-hidden="true" class="publication-link-icon"><svg fill="none" stroke="currentColor" stroke-width="1.7" viewbox="0 0 24 24"><circle cx="12" cy="8" fill="none" r="5"></circle><path d="m8 12-2 9 6-3 6 3-2-9" fill="none"></path></svg></span></a>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section aria-labelledby="publications-review" class="publication-group">
+              <h3 class="subsection-title" id="publications-review">Under review</h3>
+              <ul class="list-stack">
+                <li class="list-item">
+                  <h3> Decentralized graph attention-based multi-agent reinforcement learning for communications in autonomous lunar rover swarms </h3>
+                  <p> <span class="author-self">F. Lozano-Cuadra</span>, B. Soret, M. Sanchez Net, A. Cauligi, and F. Rossi. Under review, 2026. </p>
+                  <div aria-label="Publication links" class="publication-links">
+                    <a class="publication-link project-website" href="gatmarl/"><img src="../resources/logos/web-globe.svg" width="16" height="16" alt="">Project website</a>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section aria-labelledby="manuscripts" class="publication-group">
+              <h3 class="subsection-title" id="manuscripts">Manuscripts</h3>
+              <ul class="list-stack">
+                <li class="list-item">
+                  <h3>Open-World, Communication-Aware Multi-Robot Exploration with Vision Language Models</h3>
+                  <p><span class="author-self">F. Lozano-Cuadra</span>, B. Soret, M. Sanchez Net, F. Rossi, and A. Cauligi.</p>
+                  <div aria-label="Publication links" class="publication-links">
+                    <a aria-label="OpenReview PDF" class="publication-link publication-link-icon-only" data-kind="paper" href="https://openreview.net/pdf?id=wgPiAqKKMC" rel="noopener noreferrer" target="_blank" title="OpenReview PDF"><span aria-hidden="true" class="publication-link-icon"><svg fill="none" stroke="currentColor" stroke-width="1.7" viewbox="0 0 24 24"><path d="M5 2h9l5 5v15H5z M14 2v6h5 M8 12h8 M8 16h6" fill="none"></path></svg></span></a>
+                    <a class="publication-link project-website" href="fms/"><img src="../resources/logos/web-globe.svg" width="16" height="16" alt="">Project website</a>
+                  </div>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </section>
+      <section class="panel" id="reviewer">
+        <div class="collection-head">
+          <h2>Peer review</h2>
         </div>
-      </div>
-      <div class="publication-groups">
-        <section aria-labelledby="publications-journals" class="publication-group">
-          <h3 class="subsection-title" id="publications-journals">Journals</h3>
-          <ul class="list-stack">
-            <li class="list-item">
-              <h3>Continual deep reinforcement learning for decentralized satellite routing</h3>
-              <p> <span class="author-self">F. Lozano-Cuadra</span>, B. Soret, I. Leyva-Mayorga, and P. Popovski. <em>IEEE Transactions on Communications</em>, 2025. DOI: 10.1109/TCOMM.2025.3562522. </p>
-              <div aria-label="Publication links" class="publication-links">
-                <a aria-label="IEEE Xplore" class="publication-link publication-link-icon-only" data-kind="ieee" href="https://doi.org/10.1109/TCOMM.2025.3562522" rel="noopener noreferrer" target="_blank" title="IEEE Xplore">
-                  <span aria-hidden="true" class="publication-link-icon">
-                    <span class="publication-link-mark">IEEE</span>
-                  </span>
-                </a>
-                <a aria-label="Google Scholar" class="publication-link publication-link-icon-only" data-kind="scholar" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=6PZm2aYAAAAJ&amp;citation_for_view=6PZm2aYAAAAJ:d1gkVwhDpl0C" rel="noopener noreferrer" target="_blank" title="Google Scholar">
-                  <span aria-hidden="true" class="publication-link-icon">
-                    <img alt="" class="publication-link-logo" decoding="async" height="16" src="../resources/logos/google-scholar.svg" width="16"/>
-                  </span>
-                </a>
-                <a aria-label="arXiv" class="publication-link publication-link-icon-only" data-kind="arxiv" href="https://arxiv.org/abs/2405.12308" rel="noopener noreferrer" target="_blank" title="arXiv">
-                  <span aria-hidden="true" class="publication-link-icon">
-                    <span class="publication-link-mark">arXiv</span>
-                  </span>
-                </a>
-                <a class="publication-link" href="tcom/">Project</a>
-              </div>
-            </li>
-            <li class="list-item">
-              <h3> Routing and downlink resource allocation for multicast traffic in LEO satellite constellations </h3>
-              <p> <span class="author-self">F. Lozano-Cuadra</span>, I. Leyva-Mayorga, J. J. Nielsen, and B. Soret. <em>International Journal of Satellite Communications and Networking</em>, 2026. DOI: 10.1002/sat.70086. </p>
-              <div aria-label="Publication links" class="publication-links">
-                <a aria-label="Wiley Online Library" class="publication-link publication-link-icon-only" data-kind="wiley" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sat.70086" rel="noopener noreferrer" target="_blank" title="Wiley Online Library">
-                  <span aria-hidden="true" class="publication-link-icon">
-                    <span class="publication-link-mark">Wiley</span>
-                  </span>
-                </a>
-                <a aria-label="Google Scholar" class="publication-link publication-link-icon-only" data-kind="scholar" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=es&amp;user=6PZm2aYAAAAJ&amp;citation_for_view=6PZm2aYAAAAJ:UeHWp8X0CEIC" rel="noopener noreferrer" target="_blank" title="Google Scholar">
-                  <span aria-hidden="true" class="publication-link-icon">
-                    <img alt="" class="publication-link-logo" decoding="async" height="16" src="../resources/logos/google-scholar.svg" width="16"/>
-                  </span>
-                </a>
-              </div>
-            </li>
-          </ul>
-        </section>
-        <section aria-labelledby="publications-conferences" class="publication-group">
-          <h3 class="subsection-title" id="publications-conferences">Conferences</h3>
-          <ul class="list-stack">
-            <li class="list-item">
-              <h3> Learning decentralized routing policies via graph attention-based multi-agent reinforcement learning in lunar delay-tolerant networks </h3>
-              <p> <span class="author-self">F. Lozano-Cuadra</span>, B. Soret, M. Sanchez Net, A. Cauligi, and F. Rossi. Accepted for presentation at the <em>International Symposium on Planetary Robotics (iSpaRo)</em>, Sendai, Japan, 2025. </p>
-              <div aria-label="Publication links" class="publication-links">
-                <a aria-label="IEEE Xplore" class="publication-link publication-link-icon-only" data-kind="ieee" href="https://ieeexplore.ieee.org/document/11437303" rel="noopener noreferrer" target="_blank" title="IEEE Xplore">
-                  <span aria-hidden="true" class="publication-link-icon">
-                    <span class="publication-link-mark">IEEE</span>
-                  </span>
-                </a>
-                <a aria-label="Google Scholar" class="publication-link publication-link-icon-only" data-kind="scholar" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=6PZm2aYAAAAJ&amp;citation_for_view=6PZm2aYAAAAJ:qjMakFHDy7sC" rel="noopener noreferrer" target="_blank" title="Google Scholar">
-                  <span aria-hidden="true" class="publication-link-icon">
-                    <img alt="" class="publication-link-logo" decoding="async" height="16" src="../resources/logos/google-scholar.svg" width="16"/>
-                  </span>
-                </a>
-                <a aria-label="arXiv" class="publication-link publication-link-icon-only" data-kind="arxiv" href="https://arxiv.org/abs/2510.20436" rel="noopener noreferrer" target="_blank" title="arXiv">
-                  <span aria-hidden="true" class="publication-link-icon">
-                    <span class="publication-link-mark">arXiv</span>
-                  </span>
-                </a>
-                <a class="publication-link" href="gatmarl/">Project</a>
-              </div>
-            </li>
-            <li class="list-item">
-              <h3> An open source multi-agent deep reinforcement learning routing simulator for satellite networks </h3>
-              <p> <span class="author-self">F. Lozano-Cuadra</span>, M. Thorsager, I. Leyva-Mayorga, and B. Soret. In <em>Proceedings of SPAICE2024: The First Joint European Space Agency / IAA Conference on AI in and for Space</em>, pp. 420-424, Sep. 17-19, 2024, ESA European Centre for Space Applications and Telecommunications (ECSAT), Oxford, UK. DOI: 10.5281/zenodo.13885645. </p>
-              <div aria-label="Publication links" class="publication-links">
-                <a aria-label="Zenodo" class="publication-link publication-link-icon-only" data-kind="doi" href="https://doi.org/10.5281/zenodo.13885645" rel="noopener noreferrer" target="_blank" title="Zenodo">
-                  <span aria-hidden="true" class="publication-link-icon">
-                    <span class="publication-link-mark">DOI</span>
-                  </span>
-                </a>
-                <a aria-label="Google Scholar" class="publication-link publication-link-icon-only" data-kind="scholar" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=6PZm2aYAAAAJ&amp;citation_for_view=6PZm2aYAAAAJ:9yKSN-GCB0IC" rel="noopener noreferrer" target="_blank" title="Google Scholar">
-                  <span aria-hidden="true" class="publication-link-icon">
-                    <img alt="" class="publication-link-logo" decoding="async" height="16" src="../resources/logos/google-scholar.svg" width="16"/>
-                  </span>
-                </a>
-                <a aria-label="arXiv" class="publication-link publication-link-icon-only" data-kind="arxiv" href="https://arxiv.org/abs/2407.11047" rel="noopener noreferrer" target="_blank" title="arXiv">
-                  <span aria-hidden="true" class="publication-link-icon">
-                    <span class="publication-link-mark">arXiv</span>
-                  </span>
-                </a>
-                <a aria-label="GitHub" class="publication-link publication-link-icon-only" data-kind="github" href="https://github.com/SatCom-TELMA/MA-DRL_Routing_Simulator" rel="noopener noreferrer" target="_blank" title="GitHub">
-                  <span aria-hidden="true" class="publication-link-icon">
-                    <svg viewbox="0 0 24 24">
-                      <path d="M12 0C5.37 0 0 5.37 0 12a12 12 0 0 0 8.2 11.38c.6.11.82-.26.82-.58 0-.29-.01-1.04-.01-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.33-1.75-1.33-1.75-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.8 1.31 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.18 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 6.8c1.02 0 2.05.14 3.01.41 2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.76.84 1.23 1.91 1.23 3.22 0 4.62-2.81 5.64-5.49 5.94.43.37.82 1.1.82 2.23 0 1.61-.01 2.91-.01 3.31 0 .32.22.69.82.58A12 12 0 0 0 24 12C24 5.37 18.63 0 12 0Z"></path>
-                    </svg>
-                  </span>
-                </a>
-                <a class="publication-link" href="tcom/">Project</a>
-              </div>
-            </li>
-            <li class="list-item">
-              <h3>Multi-Agent Deep Reinforcement Learning for Distributed Satellite Routing</h3>
-              <p> <span class="author-self">F. Lozano-Cuadra</span> and B. Soret. In <em>2024 IEEE International Conference on Machine Learning for Communication and Networking (ICMLCN)</em>, Stockholm, Sweden, 2024, pp. 1-2. DOI: 10.1109/ICMLCN59089.2024.10624767. </p>
-              <div aria-label="Publication links" class="publication-links">
-                <a aria-label="IEEE Xplore" class="publication-link publication-link-icon-only" data-kind="ieee" href="https://doi.org/10.1109/ICMLCN59089.2024.10624767" rel="noopener noreferrer" target="_blank" title="IEEE Xplore">
-                  <span aria-hidden="true" class="publication-link-icon">
-                    <span class="publication-link-mark">IEEE</span>
-                  </span>
-                </a>
-                <a aria-label="Google Scholar" class="publication-link publication-link-icon-only" data-kind="scholar" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=6PZm2aYAAAAJ&amp;citation_for_view=6PZm2aYAAAAJ:u-x6o8ySG0sC" rel="noopener noreferrer" target="_blank" title="Google Scholar">
-                  <span aria-hidden="true" class="publication-link-icon">
-                    <img alt="" class="publication-link-logo" decoding="async" height="16" src="../resources/logos/google-scholar.svg" width="16"/>
-                  </span>
-                </a>
-                <a aria-label="arXiv" class="publication-link publication-link-icon-only" data-kind="arxiv" href="https://arxiv.org/abs/2402.17666" rel="noopener noreferrer" target="_blank" title="arXiv">
-                  <span aria-hidden="true" class="publication-link-icon">
-                    <span class="publication-link-mark">arXiv</span>
-                  </span>
-                </a>
-                <a class="publication-link" href="tcom/">Project</a>
-              </div>
-            </li>
-            <li class="list-item">
-              <h3>Q-learning for distributed routing in LEO satellite constellations</h3>
-              <p> B. Soret, I. Leyva-Mayorga, <span class="author-self">F. Lozano-Cuadra</span>, and M. D. Thorsager. In <em>2024 IEEE International Conference on Machine Learning for Communication and Networking (ICMLCN)</em>, Stockholm, Sweden, 2024, pp. 208-213. DOI: 10.1109/ICMLCN59089.2024.10624807. </p>
-              <div aria-label="Publication links" class="publication-links">
-                <a aria-label="IEEE Xplore" class="publication-link publication-link-icon-only" data-kind="ieee" href="https://doi.org/10.1109/ICMLCN59089.2024.10624807" rel="noopener noreferrer" target="_blank" title="IEEE Xplore">
-                  <span aria-hidden="true" class="publication-link-icon">
-                    <span class="publication-link-mark">IEEE</span>
-                  </span>
-                </a>
-                <a aria-label="Google Scholar" class="publication-link publication-link-icon-only" data-kind="scholar" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=6PZm2aYAAAAJ&amp;citation_for_view=6PZm2aYAAAAJ:u5HHmVD_uO8C" rel="noopener noreferrer" target="_blank" title="Google Scholar">
-                  <span aria-hidden="true" class="publication-link-icon">
-                    <img alt="" class="publication-link-logo" decoding="async" height="16" src="../resources/logos/google-scholar.svg" width="16"/>
-                  </span>
-                </a>
-                <a aria-label="arXiv" class="publication-link publication-link-icon-only" data-kind="arxiv" href="https://arxiv.org/abs/2306.01346" rel="noopener noreferrer" target="_blank" title="arXiv">
-                  <span aria-hidden="true" class="publication-link-icon">
-                    <span class="publication-link-mark">arXiv</span>
-                  </span>
-                </a>
-                <a class="publication-link" href="tcom/">Project</a>
-              </div>
-            </li>
-          </ul>
-        </section>
-        <section aria-labelledby="publications-review" class="publication-group">
-          <h3 class="subsection-title" id="publications-review">Under review</h3>
-          <ul class="list-stack">
-            <li class="list-item">
-              <h3> Decentralized graph attention-based multi-agent reinforcement learning for communications in autonomous lunar rover swarms </h3>
-              <p> <span class="author-self">F. Lozano-Cuadra</span>, B. Soret, M. Sanchez Net, A. Cauligi, and F. Rossi. Under review, 2026. </p>
-              <div aria-label="Publication links" class="publication-links">
-                <a class="publication-link" href="gatmarl/">Project</a>
-              </div>
-            </li>
-          </ul>
-        </section>
-        <section aria-labelledby="manuscripts" class="publication-group">
-          <h3 class="subsection-title" id="manuscripts">Manuscripts</h3>
-          <ul class="list-stack">
-            <li class="list-item">
-              <h3>Open-World, Communication-Aware Multi-Robot Exploration with Vision Language Models</h3>
-              <p><span class="author-self">F. Lozano-Cuadra</span>, B. Soret, M. Sanchez Net, F. Rossi, and A. Cauligi.</p>
-              <div aria-label="Publication links" class="publication-links">
-                <a class="publication-link" href="https://openreview.net/pdf?id=wgPiAqKKMC" target="_blank" rel="noopener noreferrer">OpenReview PDF</a>
-                <a class="publication-link" href="fms/">Project and abstract</a>
-              </div>
-            </li>
-          </ul>
-        </section>
-      </div>
-    </section>
-  </main>
-  <script src="tcom/repository.js" defer></script>
-</body>
+        <ul class="review-columns">
+          <li><h3>Journals</h3>IEEE Transactions on Mobile Computing (TMC)</li>
+          <li>IEEE Transactions on Wireless Communications (TWC)</li>
+          <li>IEEE Transactions on Vehicular Technology (TVT)</li>
+          <li>IEEE Transactions on Machine Learning in Communications and Networking (TMLCN)</li>
+          <li>IEEE Transactions on Aerospace and Electronic Systems (TAES)</li>
+          <li>IEEE Internet of Things Journal (IoT-J)</li>
+          <li>IEEE Networking Letters (LNET)</li>
+          <li>IEEE Wireless Communications Letters (WCL)</li>
+          <li>IEEE Wireless Communications (WCM)</li>
+          <li><h3>Conferences</h3>IEEE International Conference on Robotics and Automation (ICRA)</li>
+          <li>IEEE International Conference on Communications (ICC)</li>
+          <li>IEEE Conference on Artificial Intelligence (CAI)</li>
+        </ul>
+      </section>
+      </main>
+    </div>
+    <script src="tcom/repository.js" defer></script>
+  </body>
 </html>
