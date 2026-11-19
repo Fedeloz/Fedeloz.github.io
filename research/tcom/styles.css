@@ -44,6 +44,8 @@ h1 {
   text-wrap: balance;
 }
 p { margin: 0 0 18px; }
+.project-nav { margin: 0 0 1.25rem; font-size: .875rem; }
+.project-nav a { display: inline-block; padding: .3rem 0; }
 .paper-heading {
   max-width: 1000px;
   margin: 0 auto 40px;
