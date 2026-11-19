@@ -1031,9 +1031,11 @@ main {
 
 .research-repo-card {
   display: flex;
-  align-items: flex-start;
-  gap: 0.85rem;
-  padding: 0.95rem 1.05rem;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  gap: 0.5rem;
+  padding: 0.35rem 0.6rem;
   border: 1px solid rgba(255, 247, 235, 0.08);
   border-radius: calc(var(--radius) - 14px);
   background:
@@ -1055,28 +1057,32 @@ main {
 }
 
 .research-repo-card-logo {
-  width: 1.45rem;
-  height: 1.45rem;
+  width: 1.05rem;
+  height: 1.05rem;
   flex-shrink: 0;
-  margin-top: 0.08rem;
+  align-self: center;
   display: block;
 }
 
 .research-repo-card-body {
-  display: grid;
-  gap: 0.45rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem 0.65rem;
   min-width: 0;
 }
 
 .research-repo-card-name {
   color: inherit;
   font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
-  font-size: 0.88rem;
+  font-size: 0.76rem;
   line-height: 1.35;
   word-break: break-word;
 }
 
 .research-repo-card .repo-stats {
+  font-size: 0.72rem;
+  gap: 0.4rem;
   color: rgba(246, 240, 230, 0.68);
 }
 
@@ -1305,6 +1311,10 @@ main {
 
   .hero-identity .hero-subtitle {
     max-width: none;
+  }
+
+  .research-item-copy .research-repo-card {
+    max-width: min(100%, calc(100vw - 4.5rem));
   }
 
   .research-item-featured {

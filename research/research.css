@@ -18,8 +18,8 @@ body {
 }
 a { color: var(--link); text-underline-offset: .22em; }
 a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
-.masthead, .masthead nav, .section-head { display: flex; align-items: baseline; }
-.masthead, .section-head { justify-content: space-between; gap: 1rem; }
+.masthead, .masthead nav { display: flex; align-items: baseline; }
+.masthead { justify-content: space-between; gap: 1rem; }
 .masthead {
   padding: 1.2rem 0;
   border-bottom: 1px solid var(--ink);
@@ -33,7 +33,7 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 h2, h3, h4, p { margin: 0; }
 h2 { font: 500 clamp(1.8rem, 3.2vw, 2.55rem)/1.15 var(--serif); letter-spacing: -.03em; }
 #projects > h2 { margin: 1.8rem 0 1.15rem; }
-#projects > .projects + h2, #publications { margin-top: 2.8rem; border-top: 1px solid var(--rule); padding-top: 1.55rem; }
+#projects > .projects + h2 { margin-top: 2.8rem; border-top: 1px solid var(--rule); padding-top: 1.55rem; }
 .projects { display: grid; gap: clamp(18px, 2.4vw, 34px); }
 .satellite { grid-template-columns: 1.28fr 1fr; }
 .lunar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -54,22 +54,23 @@ h2 { font: 500 clamp(1.8rem, 3.2vw, 2.55rem)/1.15 var(--serif); letter-spacing: 
 .project h3 { margin: .78rem 0 .28rem; font: 500 clamp(1.22rem, 2vw, 1.65rem)/1.18 var(--serif); }
 .project h3 span { font: .68em/1 sans-serif; white-space: nowrap; color: var(--link); }
 .project p { max-width: 60ch; color: var(--muted); font-size: .95rem; }
-.section-head { margin-bottom: 1.1rem; flex-wrap: wrap; }
-.section-head a, .links a { font-size: .86rem; }
-.group { display: grid; grid-template-columns: minmax(7.2rem, 19%) 1fr; border-top: 1px solid var(--rule); padding: 1.3rem 0; }
-.group > h3 { font: 500 1.25rem/1.3 var(--serif); }
-.group ul { list-style: none; margin: 0; padding: 0; }
-.group li + li { margin-top: 1.1rem; border-top: 1px solid var(--rule); padding-top: 1.1rem; }
-.group h4 { font: 500 1.2rem/1.32 var(--serif); }
-.group p { margin: .35rem 0; max-width: 88ch; color: var(--muted); font-size: .91rem; }
-.author-self { font-weight: 600; }
-.links { display: flex; gap: .3rem 1rem; flex-wrap: wrap; }
+main { display: block; }
+.satellite-project .project { display: block; }
+.satellite-project .research-repo-card { margin-top: .75rem; }
+#publications {
+  margin-top: 2.8rem;
+  overflow-wrap: anywhere;
+  font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", "Book Antiqua", Georgia, serif;
+  line-height: 1.6;
+  color: var(--text);
+  --muted: #62574a;
+}
 @media (max-width: 700px) {
-  .projects, .group { grid-template-columns: 1fr; }
+  #publications { padding: 1rem; }
+  .projects { grid-template-columns: 1fr; }
   .projects { gap: 1.75rem; }
   .plots { aspect-ratio: auto; padding: .6rem 0; gap: .4rem; }
   .plots img { width: 94%; }
-  .group > h3 { margin-bottom: .85rem; }
   .masthead { gap: .55rem 1rem; }
   .masthead nav { gap: .9rem; }
 }
