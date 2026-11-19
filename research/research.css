@@ -1,0 +1,35 @@
+.overview { gap: 2rem; }
+.overview-heading { max-width: 48rem; }
+.byline, .destination, .overview footer a {
+  color: var(--accent);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: .82rem;
+}
+.overview-heading h1 { font-size: clamp(2.8rem, 6vw, 4.5rem); line-height: 1.1; margin: .4rem 0 .75rem; }
+.overview-heading p { max-width: 43rem; font-size: 1.15rem; color: var(--muted); }
+.topics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
+.topics h2 { font-size: 1.65rem; margin-bottom: .8rem; }
+.projects { display: grid; gap: .85rem; }
+.project {
+  display: grid;
+  grid-template-columns: clamp(6rem, 9vw, 8rem) 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel);
+}
+.project:hover, .project:focus-visible { border-color: var(--accent); background: #fffdf7; }
+.project:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.project img { display: block; width: 100%; height: auto; border-radius: 5px; }
+.project h3 { margin: 0; font-size: 1.25rem; line-height: 1.2; }
+.project p { margin: .45rem 0 .65rem; line-height: 1.45; color: var(--muted); }
+.destination { display: inline-block; }
+.overview footer a, .byline:hover { text-decoration: underline; text-underline-offset: .2em; }
+@media (max-width: 800px) {
+  .topics { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+@media (max-width: 420px) {
+  .project { grid-template-columns: 4.75rem 1fr; gap: .75rem; padding: .85rem; }
+}
