@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Continual Deep Reinforcement Learning · Satellite Routing</title>
-  <meta name="description" content="Continual deep reinforcement learning for decentralized satellite routing. Animation, abstract, papers, and open-source simulator.">
+  <meta name="description" content="Continual deep reinforcement learning for decentralized satellite routing. Video, abstract, papers, and open-source simulator.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=paper-cards-1">
+  <link rel="stylesheet" href="styles.css?v=kepler">
 </head>
 <body>
   <main>
@@ -70,16 +70,16 @@
     </div>
     <figure class="video">
       <div class="video-player">
-      <video autoplay controls playsinline loop muted preload="metadata" poster="assets/poster.jpg" aria-label="Satellite routing animation between Málaga and Los Angeles" width="640" height="360">
-        <source src="assets/routing-demo.mp4" type="video/mp4">
-        <a href="https://drive.google.com/file/d/1214G8oXsMLaqqRrAIqweVkSTFjZ3FOHx/view">Watch the full demonstration on Google Drive</a>.
+      <video autoplay controls playsinline loop muted preload="metadata" poster="assets/poster.jpg?v=kepler" aria-label="Kepler satellite routing simulation between Málaga and Los Angeles" width="1440" height="900">
+        <source src="assets/routing-demo.mp4?v=kepler" type="video/mp4">
+        <a href="https://drive.google.com/file/d/1w4NRb6pDta40wyVe0xtMbMbFF9Bajs07/view">Watch the full demonstration on Google Drive</a>.
       </video>
       <button class="video-play" type="button" aria-label="Play video" hidden>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v18l16-9z"/></svg>
       </button>
       </div>
       <figcaption>MA-DRL routing in a moving Kepler constellation, from Málaga, Spain, to Los Angeles, USA.</figcaption>
-      <p class="credits">Animation from the <a href="https://github.com/SatCom-TELMA/MA-DRL_Routing_Simulator">open-source simulator</a>. <a href="https://drive.google.com/file/d/1214G8oXsMLaqqRrAIqweVkSTFjZ3FOHx/view">Watch the full demonstration ↗</a></p>
+      <p class="credits">Simulation from the <a href="https://github.com/SatCom-TELMA/MA-DRL_Routing_Simulator">open-source simulator</a>. <a href="https://drive.google.com/file/d/1w4NRb6pDta40wyVe0xtMbMbFF9Bajs07/view">Watch on Google Drive ↗</a></p>
     </figure>
     <section class="abstract" aria-labelledby="abstract-title"><h2 id="abstract-title">Abstract</h2><p>This paper introduces a full solution for decentralized routing in Low Earth Orbit Satellite Constellations (LSatCs) based on continual Deep Reinforcement Learning (DRL). This requires addressing multiple challenges, including the partial knowledge at the satellites and their continuous movement, and the time-varying sources of uncertainty in the system, such as traffic, communication links, or communication buffers. We follow a multi-agent approach, where each satellite acts as an independent decision-making agent, while acquiring a limited knowledge of the environment based on the feedback received from the nearby agents.</p>
       <p>The solution is divided into two phases. First, an offline learning phase relies on decentralized decisions and a global Deep Neural Network (DNN) trained with global experiences to learn the optimal paths at each possible position and congestion level. Then, the online phase with local, on-board, and pre-trained DNNs requires continual learning to evolve with the environment, which can be done in two different ways: (1) Model anticipation, where the predictable conditions of the constellation, resulting from its orbital dynamics, are exploited by each satellite sharing local model with the next satellite; and (2) Federated Learning (FL), where each agent’s model is merged first at the cluster level and then aggregated in a global Parameter Server (PS) at ground or at a geostationary orbit (GEO) satellite.</p>

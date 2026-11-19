@@ -62,7 +62,7 @@ video {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16/9;
+  aspect-ratio: 8/5;
   background: #050e12;
   border: 1px solid #3c484b;
   border-radius: 4px;
