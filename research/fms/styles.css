@@ -105,6 +105,17 @@ figcaption { font-size: 13px; color: #bdc4c1; margin-top: 17px; line-height: 1.6
   .abstract p { font-size: 17px; line-height: 1.8; }
 }
 
+.paper-link {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 3px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 13px;
+  text-decoration: none;
+}
+.paper-link:hover { border-color: var(--accent); }
+
 .authors sup, .affiliations sup { font-size: .7em; color: var(--accent); }
 .affiliations { margin: 16px auto 0; max-width: 900px; color: var(--muted); font-size: 12px; line-height: 1.8; }
 .affiliations p { margin: 3px 0; }
